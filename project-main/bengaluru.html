@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bengaluru Branch - SafeCare Hospital</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<style>
+   :root {
+  --safecare-blue: #007bff; /* Standard blue for branding */
+  --safecare-blue-light: #90e0ef; /* Navbar background */
+  --safecare-blue-dark: #023e8a;  /* Strong contrast blue for hover */
+}
+.internal-page header {
+  background-color: var(--safecare-blue-light) !important;
+  transition: none !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Keeps the shadow */
+}
+
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  padding-top: 120px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #90e0ef; /* light blue */
+  z-index: 1000;
+  padding: 1rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.logo-text h1 {
+  color: white;
+  margin: 0;
+  font-size: 2rem;
+}
+
+.logo p {
+  margin: 0;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+nav .nav-links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 1rem;
+  padding: 0;
+}
+
+nav .nav-links a {
+  text-decoration: none;
+  color: var(--safecare-blue); /* Normal state */
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav .nav-links a:hover,
+nav .nav-links a.active {
+  color: var(--safecare-blue-dark); /* Darker blue for better contrast */
+  text-decoration: underline;
+}
+
+.branch-header h1 {
+  color: var(--safecare-blue);
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.breadcrumbs a {
+  color: #555;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumbs span {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+  </style>
+  
+  
+  <body class="internal-page">
+    <div class="page-background">
+        <!-- Header -->
+        <header>
+            <div class="container">
+                <div class="header-top">
+                    <div class="logo-container">
+                        <img src="assests/logo1.png" alt="logo" class="logo"> 
+                        <div class="logo-text">
+                            <h1>SafeCare Hospital</h1>
+                            <p>Dedicated to patient wellness</p>
+                        </div>
+                    </div>
+                </div>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="branch-details.html" class="active">Branches</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="specialties.html">Specialties</a></li>
+                        <li><a href="family-card.html">Family Card</a></li>
+                        <li><a href="health-checkups.html">Health Checkups</a></li>
+                        <li><a href="appointment.html">Appointment</a></li>
+                        <li><a href="index.html">Insurance</a></li>
+                        <li><a href="help.html">Help</a></li>
+                    </ul>
+                    <div class="mobile-menu-btn">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Branch Details Section -->
+        <section class="branch-details">
+            <div class="container">
+                <div class="branch-header">
+                    <h1>Bengaluru Branch</h1>
+                    <div class="breadcrumbs">
+                        <a href="index.html">Home</a> &gt; 
+                        <a href="branch-details.html">Branches</a> &gt; 
+                        <span>Bengaluru</span>
+                    </div>
+                </div>
+                
+                <div class="branch-content-wrapper">
+                    <div class="branch-image-large">
+                        <img  src="assests/hs.jpg" alt="Bengaluru Branch Building">
+                    </div>
+                    
+                    <div class="branch-info">
+                        <div class="info-card">
+                            <h3><i class="fas fa-map-marker-alt"></i> Location</h3>
+                            <p>987 Tech Park Road, Whitefield</p>
+                            <p>Bengaluru, Karnataka 560066</p>
+                        </div>
+                        
+                        <div class="info-card">
+                            <h3><i class="fas fa-phone"></i> Contact</h3>
+                            <p>Phone: +91 80 4567 8901</p>
+                            <p>Email: bengaluru@safecarehospital.com</p>
+                        </div>
+                        
+                        <div class="info-card">
+                            <h3><i class="fas fa-clock"></i> Working Hours</h3>
+                            <p>Emergency: 24/7</p>
+                            <p>OPD: 8:00 AM - 9:00 PM (Mon-Sat)</p>
+                            <p>Diagnostics: 7:00 AM - 10:00 PM (All days)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="branch-description">
+                        <h2>About Our Bengaluru Branch</h2>
+                        <p>Established in 2014, our Bengaluru branch is a tech-forward healthcare facility in India's Silicon Valley. This 280-bed multi-specialty hospital combines digital innovation with medical excellence, providing cutting-edge healthcare services to the tech-savvy residents of Bengaluru and surrounding areas.</p>
+                        
+                        <h3>Our Facilities</h3>
+                        <ul class="facilities-list">
+                            <li><i class="fas fa-heartbeat"></i> Advanced Cardiac Care Unit</li>
+                            <li><i class="fas fa-brain"></i> Neuroscience Center</li>
+                            <li><i class="fas fa-laptop-medical"></i> Digital Health Department</li>
+                            <li><i class="fas fa-procedures"></i> 10 Smart Operation Theaters</li>
+                            <li><i class="fas fa-x-ray"></i> AI-Assisted Imaging Center</li>
+                            <li><i class="fas fa-ambulance"></i> 24/7 Emergency Services</li>
+                            <li><i class="fas fa-flask"></i> Advanced Diagnostic Labs</li>
+                            <li><i class="fas fa-robot"></i> Robotic Surgery Unit</li>
+                        </ul>
+                        
+                        <h3>Our Specialties</h3>
+                        <div class="specialties-grid">
+                            <div class="specialty-item">
+                                <i class="fas fa-heart"></i>
+                                <span>Cardiology</span>
+                            </div>
+                            <div class="specialty-item">
+                                <i class="fas fa-brain"></i>
+                                <span>Neurology</span>
+                            </div>
+                            <div class="specialty-item">
+                                <i class="fas fa-bone"></i>
+                                <span>Orthopedics</span>
+                            </div>
+                            <div class="specialty-item">
+                                <i class="fas fa-robot"></i>
+                                <span>Robotic Surgery</span>
+                            </div>
+                            <div class="specialty-item">
+                                <i class="fas fa-laptop-medical"></i>
+                                <span>Telemedicine</span>
+                            </div>
+                            <div class="specialty-item">
+                                <i class="fas fa-dna"></i>
+                                <span>Genomics</span>
+                            </div>
+                        </div>
+                        
+                        <h3>Meet Our Team</h3>
+                        <div class="doctors-grid">
+                            <div class="doctor-card">
+                                <img src="assests/img4.jpg" alt="Dr. Kiran Kumar">
+                                <h4>Dr. Kiran Kumar</h4>
+                                <p>Chief Innovation Officer</p>
+                            </div>
+                            <div class="doctor-card">
+                                <img src="assests/img6.jpg" alt="Dr. Sunita Rao">
+                                <h4>Dr. Sunita Rao</h4>
+                                <p>Robotic Surgery Specialist</p>
+                            </div>
+                            <div class="doctor-card">
+                                <img src="assests/img5.png" alt="Dr. Mohan Reddy">
+                                <h4>Dr. Mohan Reddy</h4>
+                                <p>Neurologist</p>
+                            </div>
+                        </div>
+                        
+                        <div class="navigation-buttons">
+                            <a href="branch-details.html" class="btn btn-secondary">
+                                <i class="fas fa-arrow-left"></i> Back
+                            </a>
+                            <a href="index.html" class="btn btn-primary">
+                                <i class="fas fa-home"></i> Home
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <h2>SafeCare Hospital</h2>
+                        <p>Dedicated to patient wellness</p>
+                    </div>
+                    <div class="footer-links">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="branch-details.html">Branches</a></li>
+                            <li><a href="index.html#our-services">Services</a></li>
+                            <li><a href="index.html#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-contact">
+                        <h3>Contact Us</h3>
+                        <p><i class="fas fa-phone"></i> +91 1234567890</p>
+                        <p><i class="fas fa-envelope"></i> info@safecarehospital.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Health Street, Medical District</p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 SafeCare Hospital. All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>

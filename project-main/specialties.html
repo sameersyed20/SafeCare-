@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Branches - SafeCare Hospital</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="specialties.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<style>
+    :root {
+  --safecare-blue: #007bff; /* Standard blue for branding */
+  --safecare-blue-light: #90e0ef; /* Navbar background */
+  --safecare-blue-dark: #023e8a;  /* Strong contrast blue for hover */
+}
+.internal-page header {
+  background-color: var(--safecare-blue-light) !important;
+  transition: none !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Keeps the shadow */
+}
+
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  padding-top: 120px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #90e0ef; /* light blue */
+  z-index: 1000;
+  padding: 1rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.logo-text h1 {
+  color: white;
+  margin: 0;
+  font-size: 2rem;
+}
+
+.logo p {
+  margin: 0;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+nav .nav-links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 1rem;
+  padding: 0;
+}
+
+nav .nav-links a {
+  text-decoration: none;
+  color: var(--safecare-blue); /* Normal state */
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav .nav-links a:hover,
+nav .nav-links a.active {
+  color: var(--safecare-blue-dark); /* Darker blue for better contrast */
+  text-decoration: underline;
+}
+
+.branch-header h1 {
+  color: var(--safecare-blue);
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.breadcrumbs a {
+  color: #555;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumbs span {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+  </style>
+  
+  
+ 
+  <body class="internal-page">
+    <div class="page-background">
+        <!-- Header -->
+        <header>
+            <div class="container">
+                <div class="header-top">
+                    <div class="logo-container">
+                        <img src="assests/logo1.png" alt="logo" class="logo"> 
+                        <div class="logo-text">
+                            <h1>SafeCare Hospital</h1>
+                            <p>Dedicated to patient wellness</p>
+                        </div>
+                    </div>
+                </div>
+       
+               <nav>
+                   <ul class="nav-links">
+                       <li><a href="index.html" class="active">Home</a></li>
+                       <li><a href="branch-details.html">Branches</a></li>
+                       <li><a href="services.html">Our Services</a></li>
+                       <li><a href="specialties.html">Specialties</a></li>
+                       <li><a href="family-card.html">Family Card</a></li>
+                       <li><a href="health-checkups.html">Health Checkups</a></li>
+                       <li><a href="appointment.html">Appointment</a></li>
+                       <li><a href="insurance.html">Insurance</a></li>
+                       <li><a href="help.html">Help</a></li>
+                   </ul>
+                   <div class="mobile-menu-btn">
+                       <i class="fas fa-bars"></i>
+                   </div>
+               </nav>
+           </div>
+       </header>   
+
+
+<!-- Services Section -->
+<section id="specialties" class="specialties">
+    <div class="container">
+        <div class="section-header">
+            <h1 class="section-title" style="color: #0077b6;">Our Specialties</h1>
+            <p class="section-description">Compassionate and expert-led healthcare tailored to every patient’s unique needs.</p>
+        </div>
+        <div class="specialties-grid">
+            <div class="specialty-card">
+                <div class="specialty-icon">
+                    <i class="fas fa-heartbeat"></i>
+                </div>
+                <h3>Cardiology</h3>
+                <p>Expert care for heart conditions with advanced diagnostic and treatment options.</p>
+                <a href="cardiology.html" class="learn-more">Learn More</a>
+            </div>
+            <div class="specialty-card">
+                <div class="specialty-icon">
+                    <i class="fas fa-tooth"></i>
+                </div>
+                <h3>Dental Care</h3>
+                <p>Comprehensive dental services from routine check-ups to advanced procedures.</p>
+                <a href="dental-care.html" class="learn-more">Learn More</a>
+            </div>
+            <div class="specialty-card">
+                <div class="specialty-icon">
+                    <i class="fas fa-baby"></i>
+                </div>
+                <h3>Pediatrics</h3>
+                <p>Specialized healthcare for infants, children, and adolescents.</p>
+                <a href="pediatrics.html" class="learn-more">Learn More</a>
+            </div>
+            <div class="specialty-card">
+                <div class="specialty-icon">
+                    <i class="fas fa-bone"></i>
+                </div>
+                <h3>Orthocare</h3>
+                <p>Treatment for bone and joint conditions with a focus on mobility and pain relief.</p>
+                <a href="orthocare.html" class="learn-more">Learn More</a>
+            </div>
+            <div class="specialty-card">
+                <div class="specialty-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h3>Psychology</h3>
+                <p>Mental health services with compassionate care and evidence-based treatments.</p>
+                <a href="psychology.html" class="learn-more">Learn More</a>
+            </div>
+            <div class="specialty-card">
+                <div class="specialty-icon">
+                    <i class="fas fa-ambulance"></i>
+                </div>
+                <h3>Trauma Center</h3>
+                <p>24/7 emergency care for critical injuries with rapid response teams.</p>
+                <a href="trauma-center.html" class="learn-more">Learn More</a>
+            </div>
+            <!-- New Specialty: Dermatology -->
+            <div class="specialty-card">
+                <div class="specialty-icon">
+                    <i class="fas fa-air-freshener"></i>
+                </div>
+                <h3>Dermatology</h3>
+                <p>Advanced treatment for skin conditions, cosmetic procedures, and skin care solutions.</p>
+                <a href="dermatology.html" class="learn-more">Learn More</a>
+            </div>
+            <!-- New Specialty: Physiotherapy -->
+            <div class="specialty-card">
+                <div class="specialty-icon">
+                    <i class="fas fa-running"></i>
+                </div>
+                <h3>Physiotherapy</h3>
+                <p>Rehabilitation programs focused on restoring mobility, reducing pain, and improving quality of life.</p>
+                <a href="physiotherapy.html" class="learn-more">Learn More</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>SafeCare Hospital</h2>
+                <p>Dedicated to patient wellness</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="branch-details.html">Branches</a></li>
+                    <li><a href="index.html#our-services">Services</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-phone"></i> +91 1234567890</p>
+                <p><i class="fas fa-envelope"></i> info@safecarehospital.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Health Street, Medical District</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 SafeCare Hospital. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

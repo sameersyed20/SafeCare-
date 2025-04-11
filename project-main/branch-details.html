@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Branches - SafeCare Hospital</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+   
+<style>
+    :root {
+   --safecare-blue: #007bff; /* Standard blue for branding */
+   --safecare-blue-light: #90e0ef; /* Navbar background */
+   --safecare-blue-dark: #023e8a;  /* Strong contrast blue for hover */
+ }
+ .internal-page header {
+   background-color: var(--safecare-blue-light) !important;
+   transition: none !important;
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Keeps the shadow */
+ }
+ 
+ 
+ body {
+   margin: 0;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   background-color: #f8f9fa;
+   padding-top: 120px;
+ }
+ 
+ header {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   background-color: #90e0ef; /* light blue */
+   z-index: 1000;
+   padding: 1rem 0;
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+   transition: background-color 0.3s ease;
+ }
+ 
+ 
+ .container {
+   max-width: 1200px;
+   margin: auto;
+   padding: 0 20px;
+ }
+ 
+ .logo-text h1 {
+   color: white;
+   margin: 0;
+   font-size: 2rem;
+ }
+ 
+ .logo p {
+   margin: 0;
+   color: #555;
+   font-size: 0.9rem;
+ }
+ 
+ nav .nav-links {
+   list-style: none;
+   display: flex;
+   flex-wrap: wrap;
+   gap: 15px;
+   margin-top: 1rem;
+   padding: 0;
+ }
+ 
+ nav .nav-links a {
+   text-decoration: none;
+   color: var(--safecare-blue); /* Normal state */
+   font-weight: 500;
+   transition: color 0.3s ease;
+ }
+ 
+ nav .nav-links a:hover,
+ nav .nav-links a.active {
+   color: var(--safecare-blue-dark); /* Darker blue for better contrast */
+   text-decoration: underline;
+ }
+ 
+ .branch-header h1 {
+   color: var(--safecare-blue);
+   font-size: 2.5rem;
+   margin-bottom: 10px;
+ }
+ 
+ .breadcrumbs a {
+   color: #555;
+   text-decoration: none;
+   font-size: 0.9rem;
+ }
+ 
+ .breadcrumbs a:hover {
+   text-decoration: underline;
+ }
+ 
+ .breadcrumbs span {
+   font-size: 0.9rem;
+   color: #888;
+ }
+ 
+   </style>
+   
+   
+   <body class="internal-page">
+     <div class="page-background">
+         <!-- Header -->
+         <header>
+             <div class="container">
+                 <div class="header-top">
+                     <div class="logo-container">
+                         <img src="assests/logo1.png" alt="logo" class="logo"> 
+                         <div class="logo-text">
+                             <h1>SafeCare Hospital</h1>
+                             <p>Dedicated to patient wellness</p>
+                         </div>
+                     </div>
+                 </div>
+        
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="branch-details.html">Branches</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="specialties.html">Specialties</a></li>
+                        <li><a href="family-card.html">Family Card</a></li>
+                        <li><a href="health-checkups.html">Health Checkups</a></li>
+                        <li><a href="appointment.html">Appointment</a></li>
+                        <li><a href="insurance.html">Insurance</a></li>
+                        <li><a href="help.html">Help</a></li>
+                    </ul>
+                    <div class="mobile-menu-btn">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </nav>
+            </div>
+        </header>                
+        
+
+        <!-- Branches Section -->
+        <section class="branches-section">
+            <div class="container">
+                <h1 class="section-title">Our Branches</h1>
+                <p class="section-description">SafeCare Hospital is proud to serve patients across India with state-of-the-art facilities in major cities.</p>
+                
+                <div class="branches-grid">
+                    <div class="branch-card">
+                        <div class="branch-image">
+                            <img src="assests/charminar.jpg" alt="Hyderabad Branch">
+                        </div>
+                        <div class="branch-content">
+                            <h3>Hyderabad</h3>
+                            <p>Our flagship hospital with cutting-edge technology</p>
+                            <a href="hyderabad.html" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                    
+                    <div class="branch-card">
+                        <div class="branch-image">
+                            <img src="assests/mumbai.jpg" alt="Mumbai Branch">
+                        </div>
+                        <div class="branch-content">
+                            <h3>Mumbai</h3>
+                            <p>Serving the heart of India's financial capital</p>
+                            <a href="mumbai.html" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                    
+                    <div class="branch-card">
+                        <div class="branch-image">
+                            <img src="assests/delhi.jpg" alt="Delhi Branch">
+                        </div>
+                        <div class="branch-content">
+                            <h3>Delhi</h3>
+                            <p>Premier healthcare in the national capital</p>
+                            <a href="delhi.html" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                    
+                    <div class="branch-card">
+                        <div class="branch-image">
+                            <img src="assests/pune.jpg" alt="Pune Branch">
+                        </div>
+                        <div class="branch-content">
+                            <h3>Pune</h3>
+                            <p>Excellence in healthcare for western India</p>
+                            <a href="pune.html" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                    
+                    <div class="branch-card">
+                        <div class="branch-image">
+                            <img src="assests/vizag.webp" alt="Vizag Branch">
+                        </div>
+                        <div class="branch-content">
+                            <h3>Vizag</h3>
+                            <p>Coastal city's most trusted healthcare provider</p>
+                            <a href="vizag.html" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                    
+                    <div class="branch-card">
+                        <div class="branch-image">
+                            <img src="assests/Bengaluru.jpg" alt="Bengaluru Branch">
+                        </div>
+                        <div class="branch-content">
+                            <h3>Bengaluru</h3>
+                            <p>Innovative healthcare in the tech hub of India</p>
+                            <a href="bengaluru.html" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                    
+                    <div class="branch-card">
+                        <div class="branch-image">
+                            <img src="assests/chennai.jpg" alt="Chennai Branch">
+                        </div>
+                        <div class="branch-content">
+                            <h3>Chennai</h3>
+                            <p>Advanced medical care in Tamil Nadu's capital</p>
+                            <a href="chennai.html" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                    
+                    <div class="branch-card">
+                        <div class="branch-image">
+                            <img src="assests/kerela.jpg" alt="Kerala Branch">
+                        </div>
+                        <div class="branch-content">
+                            <h3>Kerala</h3>
+                            <p>Holistic healthcare in God's own country</p>
+                            <a href="kerela.html" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <h2>SafeCare Hospital</h2>
+                        <p>Dedicated to patient wellness</p>
+                    </div>
+                    <div class="footer-links">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="branch-details.html">Branches</a></li>
+                            <li><a href="index.html#our-services">Services</a></li>
+                            <li><a href="index.html#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-contact">
+                        <h3>Contact Us</h3>
+                        <p><i class="fas fa-phone"></i> +91 1234567890</p>
+                        <p><i class="fas fa-envelope"></i> info@safecarehospital.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Health Street, Medical District</p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 SafeCare Hospital. All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

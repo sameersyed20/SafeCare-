@@ -1,0 +1,31 @@
+<!-- 
+INSTRUCTIONS:
+
+Add these modifications to your existing HTML forms to connect them to the PHP backend.
+For each form, change the form tag to include method="post", action="[php-file]", and enctype="multipart/form-data" attributes.
+-->
+
+<!-- 1. Family Card Form Modification -->
+<!-- Change your existing form tag to: -->
+<form id="family-card-form" method="post" action="family_card_process.php" enctype="multipart/form-data">
+    <!-- Keep all your existing form fields -->
+</form>
+
+<!-- 2. Appointment Form Modification -->
+<!-- Change your existing form tag to: -->
+<form id="checkup-form" method="post" action="appointment_process.php" enctype="multipart/form-data">
+    <!-- Keep all your existing form fields -->
+</form>
+
+<!-- 3. Insurance Query Form Modification -->
+<!-- Change your existing form tag to: -->
+<form id="insurance-query-form" method="post" action="insurance_process.php" enctype="multipart/form-data">
+    <!-- Keep all your existing form fields -->
+</form>
+
+<!-- 
+IMPORTANT: 
+1. Make sure all your form field names match the ones expected in the PHP files
+2. For file uploads, ensure you have the enctype="multipart/form-data" attribute
+3. The form IDs should match what you're using in your JavaScript for validation
+-->

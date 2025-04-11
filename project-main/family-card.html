@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Card - SafeCare Hospital</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="additional-pages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<style>
+    :root {
+  --safecare-blue: #007bff; /* Standard blue for branding */
+  --safecare-blue-light: #90e0ef; /* Navbar background */
+  --safecare-blue-dark: #023e8a;  /* Strong contrast blue for hover */
+}
+.internal-page header {
+  background-color: var(--safecare-blue-light) !important;
+  transition: none !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Keeps the shadow */
+}
+
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  padding-top: 120px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #90e0ef; /* light blue */
+  z-index: 1000;
+  padding: 1rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.logo-text h1 {
+  color: white;
+  margin: 0;
+  font-size: 2rem;
+}
+
+.logo p {
+  margin: 0;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+nav .nav-links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 1rem;
+  padding: 0;
+}
+
+nav .nav-links a {
+  text-decoration: none;
+  color: var(--safecare-blue); /* Normal state */
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav .nav-links a:hover,
+nav .nav-links a.active {
+  color: var(--safecare-blue-dark); /* Darker blue for better contrast */
+  text-decoration: underline;
+}
+
+.branch-header h1 {
+  color: var(--safecare-blue);
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.breadcrumbs a {
+  color: #555;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumbs span {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+  </style>
+  
+  
+ 
+  <body class="internal-page">
+    <div class="page-background">
+        <!-- Header -->
+        <header>
+            <div class="container">
+                <div class="header-top">
+                    <div class="logo-container">
+                        <img src="assests/logo1.png" alt="logo" class="logo"> 
+                        <div class="logo-text">
+                            <h1>SafeCare Hospital</h1>
+                            <p>Dedicated to patient wellness</p>
+                        </div>
+                    </div>
+                </div>
+       
+               <nav>
+                   <ul class="nav-links">
+                       <li><a href="index.html" class="active">Home</a></li>
+                       <li><a href="branch-details.html">Branches</a></li>
+                       <li><a href="services.html">Our Services</a></li>
+                       <li><a href="specialties.html">Specialties</a></li>
+                       <li><a href="family-card.html">Family Card</a></li>
+                       <li><a href="health-checkups.html">Health Checkups</a></li>
+                       <li><a href="appointment.html">Appointment</a></li>
+                       <li><a href="insurance.html">Insurance</a></li>
+                       <li><a href="help.html">Help</a></li>
+                   </ul>
+                   <div class="mobile-menu-btn">
+                       <i class="fas fa-bars"></i>
+                   </div>
+               </nav>
+           </div>
+       </header>   
+
+        <!-- Family Card Section -->
+        <section class="page-section">
+            <div class="container">
+                <div class="section-header">
+                    <h1>SafeCare Family Card</h1>
+                    <div class="breadcrumbs">
+                        <a href="index.html">Home</a> &gt; 
+                        <span>Family Card</span>
+                    </div>
+                </div>
+                
+                <!-- Hero Banner -->
+                <div class="hero-banner">
+                    <div class="banner-content">
+                        <h2>One Card, Complete Family Healthcare</h2>
+                        <p>The SafeCare Family Card provides exclusive healthcare benefits and privileges for your entire family at all our branches nationwide.</p>
+                        <a href="#apply-now" class="btn btn-primary">Apply Now</a>
+                    </div>
+                    <div class="banner-image">
+                        <img src="assests/family_card.jpeg" alt="SafeCare Family Card">
+                    </div>
+                </div>
+                
+                <!-- Benefits Section -->
+                <div class="content-section">
+                    <h2 class="section-title">Benefits & Privileges</h2>
+                    <p class="section-description">Enjoy a wide range of exclusive benefits with your SafeCare Family Card.</p>
+                    
+                    <div class="benefits-grid">
+                        <div class="benefit-card">
+                            <div class="benefit-icon">
+                                <i class="fas fa-percentage"></i>
+                            </div>
+                            <h3>Discounted Services</h3>
+                            <p>Enjoy up to 25% discount on consultations, diagnostics, and treatments across all our branches.</p>
+                        </div>
+                        
+                        <div class="benefit-card">
+                            <div class="benefit-icon">
+                                <i class="fas fa-calendar-check"></i>
+                            </div>
+                            <h3>Priority Appointments</h3>
+                            <p>Get priority scheduling for appointments with our specialists and reduced waiting times.</p>
+                        </div>
+                        
+                        <div class="benefit-card">
+                            <div class="benefit-icon">
+                                <i class="fas fa-user-shield"></i>
+                            </div>
+                            <h3>Family Coverage</h3>
+                            <p>Cover up to 6 family members under a single card, including parents, spouse, and children.</p>
+                        </div>
+                        
+                        <div class="benefit-card">
+                            <div class="benefit-icon">
+                                <i class="fas fa-clipboard-check"></i>
+                            </div>
+                            <h3>Free Health Checkups</h3>
+                            <p>Receive one free comprehensive health checkup per year for each family member.</p>
+                        </div>
+                        
+                        <div class="benefit-card">
+                            <div class="benefit-icon">
+                                <i class="fas fa-ambulance"></i>
+                            </div>
+                            <h3>Emergency Services</h3>
+                            <p>Access to free ambulance services within city limits and priority emergency care.</p>
+                        </div>
+                        
+                        <div class="benefit-card">
+                            <div class="benefit-icon">
+                                <i class="fas fa-pills"></i>
+                            </div>
+                            <h3>Pharmacy Discounts</h3>
+                            <p>Get 15% off on medications at our in-house pharmacies across all branches.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card Tiers -->
+                <div class="content-section">
+                    <h2 class="section-title">Card Tiers</h2>
+                    <p class="section-description">Choose the card tier that best suits your family's healthcare needs.</p>
+                    
+                    <div class="card-tiers">
+                        <div class="tier-card">
+                            <div class="tier-header silver">
+                                <h3>Silver</h3>
+                                <div class="tier-price">
+                                    <span class="price">₹4,999</span>
+                                    <span class="period">/ year</span>
+                                </div>
+                            </div>
+                            <div class="tier-features">
+                                <ul>
+                                    <li><i class="fas fa-check"></i> Up to 4 family members</li>
+                                    <li><i class="fas fa-check"></i> 15% discount on consultations</li>
+                                    <li><i class="fas fa-check"></i> 10% discount on diagnostics</li>
+                                    <li><i class="fas fa-check"></i> 1 free basic health checkup per year</li>
+                                    <li><i class="fas fa-check"></i> Priority appointments</li>
+                                    <li><i class="fas fa-check"></i> 10% pharmacy discount</li>
+                                    <li><i class="fas fa-times"></i> Emergency ambulance service</li>
+                                    <li><i class="fas fa-times"></i> Specialist consultations discount</li>
+                                </ul>
+                            </div>
+                            <div class="tier-footer">
+                                <a href="#apply-now" class="btn btn-secondary">Select Silver</a>
+                            </div>
+                        </div>
+                        
+                        <div class="tier-card featured">
+                            <div class="tier-tag">Most Popular</div>
+                            <div class="tier-header gold">
+                                <h3>Gold</h3>
+                                <div class="tier-price">
+                                    <span class="price">₹7,999</span>
+                                    <span class="period">/ year</span>
+                                </div>
+                            </div>
+                            <div class="tier-features">
+                                <ul>
+                                    <li><i class="fas fa-check"></i> Up to 5 family members</li>
+                                    <li><i class="fas fa-check"></i> 20% discount on consultations</li>
+                                    <li><i class="fas fa-check"></i> 15% discount on diagnostics</li>
+                                    <li><i class="fas fa-check"></i> 1 free comprehensive health checkup per year</li>
+                                    <li><i class="fas fa-check"></i> Priority appointments</li>
+                                    <li><i class="fas fa-check"></i> 15% pharmacy discount</li>
+                                    <li><i class="fas fa-check"></i> Free emergency ambulance service</li>
+                                    <li><i class="fas fa-times"></i> Specialist consultations discount</li>
+                                </ul>
+                            </div>
+                            <div class="tier-footer">
+                                <a href="#apply-now" class="btn btn-primary">Select Gold</a>
+                            </div>
+                        </div>
+                        
+                        <div class="tier-card">
+                            <div class="tier-header platinum">
+                                <h3>Platinum</h3>
+                                <div class="tier-price">
+                                    <span class="price">₹12,999</span>
+                                    <span class="period">/ year</span>
+                                </div>
+                            </div>
+                            <div class="tier-features">
+                                <ul>
+                                    <li><i class="fas fa-check"></i> Up to 6 family members</li>
+                                    <li><i class="fas fa-check"></i> 25% discount on consultations</li>
+                                    <li><i class="fas fa-check"></i> 20% discount on diagnostics</li>
+                                    <li><i class="fas fa-check"></i> 1 free premium health checkup per year</li>
+                                    <li><i class="fas fa-check"></i> Priority appointments</li>
+                                    <li><i class="fas fa-check"></i> 20% pharmacy discount</li>
+                                    <li><i class="fas fa-check"></i> Free emergency ambulance service</li>
+                                    <li><i class="fas fa-check"></i> 15% discount on specialist consultations</li>
+                                </ul>
+                            </div>
+                            <div class="tier-footer">
+                                <a href="#apply-now" class="btn btn-secondary">Select Platinum</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- How It Works -->
+                <div class="content-section">
+                    <h2 class="section-title">How It Works</h2>
+                    <p class="section-description">Getting and using your SafeCare Family Card is simple and straightforward.</p>
+                    
+                    <div class="steps-container">
+                        <div class="step-item">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h3>Apply Online</h3>
+                                <p>Fill out the application form with your details and select your preferred card tier.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="step-item">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h3>Make Payment</h3>
+                                <p>Complete the payment process using your preferred payment method.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="step-item">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h3>Receive Your Card</h3>
+                                <p>Your physical card will be delivered to your address within 7 working days.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="step-item">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h3>Start Using Benefits</h3>
+                                <p>Present your card at any SafeCare Hospital branch to avail exclusive benefits.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonials -->
+                <div class="content-section">
+                    <h2 class="section-title">What Our Members Say</h2>
+                    
+                    <div class="testimonial-slider">
+                        <div class="testimonial-slide">
+                            <div class="testimonial-content">
+                                <p>"The SafeCare Family Card has been a blessing for our family. With three kids and elderly parents, we've saved significantly on healthcare expenses while receiving priority treatment."</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <img src="/placeholder.svg?height=80&width=80" alt="Sharma Family">
+                                <div>
+                                    <h4>Sharma Family</h4>
+                                    <p>Gold Member since 2022</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="testimonial-slide">
+                            <div class="testimonial-content">
+                                <p>"The free annual health checkups have helped us detect health issues early. The discounts on consultations and medications have made quality healthcare more affordable for our entire family."</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <img src="/placeholder.svg?height=80&width=80" alt="Patel Family">
+                                <div>
+                                    <h4>Patel Family</h4>
+                                    <p>Platinum Member since 2021</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="testimonial-slide">
+                            <div class="testimonial-content">
+                                <p>"As senior citizens, the priority appointments and emergency services give us peace of mind. The pharmacy discounts are particularly helpful for our regular medications."</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <img src="/placeholder.svg?height=80&width=80" alt="Kumar Family">
+                                <div>
+                                    <h4>Kumar Family</h4>
+                                    <p>Silver Member since 2023</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="slider-controls">
+                        <button class="prev-slide"><i class="fas fa-chevron-left"></i></button>
+                        <div class="slider-dots">
+                            <span class="dot active" data-slide="0"></span>
+                            <span class="dot" data-slide="1"></span>
+                            <span class="dot" data-slide="2"></span>
+                        </div>
+                        <button class="next-slide"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+                
+                <!-- Application Form -->
+                <div class="content-section" id="apply-now">
+                    <h2 class="section-title">Apply for SafeCare Family Card</h2>
+                    <p class="section-description">Fill out the form below to apply for your SafeCare Family Card.</p>
+                    
+                    <div class="form-container">
+                        <form id="family-card-form" method="post" action="family_card_process.php" enctype="multipart/form-data">
+                            <div class="form-section">
+                                <h3>Personal Information</h3>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="full-name">Full Name <span class="required">*</span></label>
+                                        <input type="text" id="full-name" name="full-name" required>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="phone">Phone Number <span class="required">*</span></label>
+                                        <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="email">Email Address <span class="required">*</span></label>
+                                        <input type="email" id="email" name="email" required>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="dob">Date of Birth <span class="required">*</span></label>
+                                        <input type="date" id="dob" name="dob" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="address">Address <span class="required">*</span></label>
+                                    <textarea id="address" name="address" rows="3" required></textarea>
+                                </div>
+                            </div>
+                            
+                            <div class="form-section">
+                                <h3>Card Selection</h3>
+                                
+                                <div class="form-group">
+                                    <label>Select Card Tier <span class="required">*</span></label>
+                                    <div class="radio-cards">
+                                        <label class="radio-card">
+                                            <input type="radio" name="card-tier" value="silver">
+                                            <div class="radio-card-content silver">
+                                                <h4>Silver</h4>
+                                                <p>₹4,999/year</p>
+                                            </div>
+                                        </label>
+                                        
+                                        <label class="radio-card">
+                                            <input type="radio" name="card-tier" value="gold" checked>
+                                            <div class="radio-card-content gold">
+                                                <h4>Gold</h4>
+                                                <p>₹7,999/year</p>
+                                            </div>
+                                        </label>
+                                        
+                                        <label class="radio-card">
+                                            <input type="radio" name="card-tier" value="platinum">
+                                            <div class="radio-card-content platinum">
+                                                <h4>Platinum</h4>
+                                                <p>₹12,999/year</p>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="family-members">Number of Family Members <span class="required">*</span></label>
+                                    <select id="family-members" name="family-members" required>
+                                        <option value="1">1 (Self only)</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4" selected>4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-section">
+                                <h3>Family Members Information</h3>
+                                <p class="form-note">Please provide details of family members to be covered (excluding yourself).</p>
+                                
+                                <div id="family-members-container">
+                                    <!-- Family member fields will be added dynamically -->
+                                    <div class="family-member-entry">
+                                        <h4>Family Member 1</h4>
+                                        <div class="form-row">
+                                            <div class="form-group">
+                                                <label for="member-name-1">Full Name <span class="required">*</span></label>
+                                                <input type="text" id="member-name-1" name="member-name-1" required>
+                                            </div>
+                                            
+                                            <div class="form-group">
+                                                <label for="member-relation-1">Relation <span class="required">*</span></label>
+                                                <select id="member-relation-1" name="member-relation-1" required>
+                                                    <option value="">Select Relation</option>
+                                                    <option value="spouse">Spouse</option>
+                                                    <option value="child">Child</option>
+                                                    <option value="parent">Parent</option>
+                                                    <option value="sibling">Sibling</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-row">
+                                            <div class="form-group">
+                                                <label for="member-dob-1">Date of Birth <span class="required">*</span></label>
+                                                <input type="date" id="member-dob-1" name="member-dob-1" required>
+                                            </div>
+                                            
+                                            <div class="form-group">
+                                                <label for="member-gender-1">Gender <span class="required">*</span></label>
+                                                <select id="member-gender-1" name="member-gender-1" required>
+                                                    <option value="">Select Gender</option>
+                                                    <option value="male">Male</option>
+                                                    <option value="female">Female</option>
+                                                    <option value="other">Other</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-section">
+                                <div class="form-group terms-checkbox">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" id="terms" name="terms" required>
+                                        <span>I agree to the <a href="#" class="terms-link">terms and conditions</a> and consent to the processing of my personal data.</span>
+                                    </label>
+                                </div>
+                                
+                                <div class="form-submit">
+                                    <button type="submit" class="btn btn-primary">Submit Application</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- FAQ Section -->
+                <div class="content-section">
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                    
+                    <div class="faq-container">
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>How long is the Family Card valid?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>The SafeCare Family Card is valid for one year from the date of issue. You will receive a renewal notification 30 days before the expiry date.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>Can I add or remove family members after getting the card?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes, you can add or remove family members during the validity period. Additional charges may apply when adding members, and no refunds are provided for removing members. Please contact our customer service for assistance.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>How soon can I start using the benefits after applying?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Once your application is processed and payment is confirmed, you will receive a digital card via email within 24 hours. You can start using the benefits immediately with the digital card. The physical card will be delivered within 7 working days.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>Are there any age restrictions for family members?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>There are no age restrictions for family members. You can include members of any age, from newborns to elderly parents or grandparents.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>Can I upgrade my card tier during the validity period?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes, you can upgrade your card tier during the validity period by paying the difference in the annual fee. Downgrades are only possible at the time of renewal.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <h2>SafeCare Hospital</h2>
+                        <p>Dedicated to patient wellness</p>
+                    </div>
+                    <div class="footer-links">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="branch-details.html">Branches</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="appointment.html">Appointment</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-contact">
+                        <h3>Contact Us</h3>
+                        <p><i class="fas fa-phone"></i> <a href="tel:+911234567890" style="color: rgba(255, 255, 255, 0.8);">+91 1234567890</a></p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:info@safecarehospital.com" style="color: rgba(255, 255, 255, 0.8);">info@safecarehospital.com</a></p>
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Health Street, Medical District</p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 SafeCare Hospital. All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="additional-pages.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - SafeCare Hospital</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Additional styles specific to services page */
+        .service-category {
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 30px;
+            margin-bottom: 40px;
+            transition: var(--transition);
+        }
+        
+        .service-category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-category h2 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .service-category h2 i {
+            font-size: 2rem;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        .service-card {
+            background-color: var(--background-light-blue);
+            border-radius: var(--border-radius);
+            padding: 25px;
+            transition: var(--transition);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .service-card:hover {
+            background-color: rgba(0, 119, 182, 0.1);
+            transform: translateY(-5px);
+        }
+        
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        .service-card h3 {
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+        
+        .service-card p {
+            color: var(--text-light);
+            margin-bottom: 15px;
+            flex-grow: 1;
+        }
+        
+        .service-card .learn-more {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            font-weight: 500;
+            margin-top: auto;
+        }
+        
+        .service-card .learn-more i {
+            transition: var(--transition);
+        }
+        
+        .service-card:hover .learn-more i {
+            transform: translateX(5px);
+        }
+        
+        .service-highlight {
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 30px;
+            margin: 50px 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            align-items: center;
+        }
+        
+        .highlight-image {
+            flex: 1;
+            min-width: 300px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            border: 5px solid var(--background-light-blue);
+        }
+        
+        .highlight-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .highlight-content {
+            flex: 2;
+            min-width: 300px;
+        }
+        
+        .highlight-content h2 {
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        
+        .highlight-content p {
+            color: var(--text-light);
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+        
+        .feature-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .feature-item i {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+        
+        .testimonial-section {
+            padding: 50px 0;
+            text-align: center;
+        }
+        
+        .testimonial-cards {
+            display: flex;
+            gap: 30px;
+            overflow-x: auto;
+            padding: 20px 0;
+            scroll-snap-type: x mandatory;
+        }
+        
+        .testimonial-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 25px;
+            box-shadow: var(--box-shadow);
+            min-width: 300px;
+            max-width: 400px;
+            scroll-snap-align: start;
+            flex: 1;
+        }
+        
+        .testimonial-card p {
+            font-style: italic;
+            color: var(--text-light);
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .testimonial-card p::before,
+        .testimonial-card p::after {
+            content: '"';
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .testimonial-author img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--primary-color);
+        }
+        
+        .author-info h4 {
+            color: var(--text-dark);
+            margin-bottom: 5px;
+        }
+        
+        .author-info p {
+            color: var(--text-light);
+            font-style: normal;
+            margin: 0;
+        }
+        
+        .faq-section {
+            margin: 50px 0;
+        }
+        
+        .faq-item {
+            background-color: white;
+            border-radius: var(--border-radius);
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        
+        .faq-question i {
+            transition: var(--transition);
+        }
+        
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+        
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+        
+        .faq-item.active .faq-answer {
+            padding: 0 20px 20px;
+            max-height: 500px;
+        }
+        
+        .cta-banner {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 50px 30px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            margin: 50px 0;
+        }
+        
+        .cta-banner h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        
+        .cta-banner p {
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .testimonial-cards {
+                padding-bottom: 30px;
+            }
+            
+            .service-category h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+   :root {
+  --safecare-blue: #007bff; /* Standard blue for branding */
+  --safecare-blue-light: #90e0ef; /* Navbar background */
+  --safecare-blue-dark: #023e8a;  /* Strong contrast blue for hover */
+}
+.internal-page header {
+  background-color: var(--safecare-blue-light) !important;
+  transition: none !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Keeps the shadow */
+}
+
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  padding-top: 120px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #90e0ef; /* light blue */
+  z-index: 1000;
+  padding: 1rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.logo-text h1 {
+  color: white;
+  margin: 0;
+  font-size: 2rem;
+}
+
+.logo p {
+  margin: 0;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+nav .nav-links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 1rem;
+  padding: 0;
+}
+
+nav .nav-links a {
+  text-decoration: none;
+  color: var(--safecare-blue); /* Normal state */
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav .nav-links a:hover,
+nav .nav-links a.active {
+  color: var(--safecare-blue-dark); /* Darker blue for better contrast */
+  text-decoration: underline;
+}
+
+.branch-header h1 {
+  color: var(--safecare-blue);
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.breadcrumbs a {
+  color: #555;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumbs span {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+  </style>
+  
+  
+ 
+  <body class="internal-page">
+    <div class="page-background">
+        <!-- Header -->
+        <header>
+            <div class="container">
+                <div class="header-top">
+                    <div class="logo-container">
+                        <img src="assests/logo1.png" alt="logo" class="logo"> 
+                        <div class="logo-text">
+                            <h1>SafeCare Hospital</h1>
+                            <p>Dedicated to patient wellness</p>
+                        </div>
+                    </div>
+                </div>
+       
+               <nav>
+                   <ul class="nav-links">
+                       <li><a href="index.html" class="active">Home</a></li>
+                       <li><a href="branch-details.html">Branches</a></li>
+                       <li><a href="services.html">Our Services</a></li>
+                       <li><a href="specialties.html">Specialties</a></li>
+                       <li><a href="family-card.html">Family Card</a></li>
+                       <li><a href="health-checkups.html">Health Checkups</a></li>
+                       <li><a href="appointment.html">Appointment</a></li>
+                       <li><a href="insurance.html">Insurance</a></li>
+                       <li><a href="help.html">Help</a></li>
+                   </ul>
+                   <div class="mobile-menu-btn">
+                       <i class="fas fa-bars"></i>
+                   </div>
+               </nav>
+           </div>
+       </header>   
+
+        <!-- Services Banner -->
+        <section class="branch-details">
+            <div class="container">
+                <div class="branch-header">
+                    <h1>Our Services</h1>
+                    <div class="breadcrumbs">
+                        <a href="index.html">Home</a> &gt; 
+                        <span>Our Services</span>
+                    </div>
+                </div>
+                
+                <!-- Introduction -->
+                <div class="branch-description" style="margin-bottom: 40px;">
+                    <h2>Comprehensive Healthcare Services</h2>
+                    <p>At SafeCare Hospital, we offer a wide range of medical services designed to meet all your healthcare needs. Our state-of-the-art facilities, combined with our team of experienced medical professionals, ensure that you receive the highest quality care for every health concern.</p>
+                    <p>From preventive care to specialized treatments, we are committed to providing personalized healthcare solutions that focus on your overall well-being. Explore our services below to learn more about how we can help you and your family maintain optimal health.</p>
+                </div>
+                
+                <!-- Primary Care Services -->
+                <div class="service-category">
+                    <h2><i class="fas fa-user-md"></i> Primary Care Services</h2>
+                    <p>Our primary care services form the foundation of your healthcare journey, focusing on preventive care, routine check-ups, and managing common health issues.</p>
+                    
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-notes-medical"></i>
+                            </div>
+                            <h3>Health Screenings</h3>
+                            <p>Routine health checks such as blood pressure, cholesterol, and diabetes screenings to monitor and maintain your health.</p>
+                        </div>
+                        
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-syringe"></i>
+                            </div>
+                            <h3>Vaccinations</h3>
+                            <p>Immunizations for all age groups to protect against common infectious diseases and support community health.</p>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-user-nurse"></i>
+                            </div>
+                            <h3>Chronic Disease Management</h3>
+                            <p>Ongoing support for managing conditions like hypertension, asthma, and diabetes with personalized care plans.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Specialty Care -->
+                <div class="service-category">
+                    <h2><i class="fas fa-hospital-user"></i> Specialty Care</h2>
+                    <p>Our specialty care services provide advanced medical expertise for specific health conditions, ensuring you receive the most effective treatments from experienced specialists.</p>
+                    
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <h3>Cardiology</h3>
+                            <p>Comprehensive care for heart conditions, including diagnostic testing, interventional procedures, cardiac rehabilitation, and preventive cardiology services.</p>
+                        </div>
+                        
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <h3>Neurology</h3>
+                            <p>Specialized care for disorders of the brain, spinal cord, and nervous system, including stroke care, epilepsy management, and treatment for neurodegenerative diseases.</p>
+                            
+                        </div>
+                        
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-bone"></i>
+                            </div>
+                            <h3>Orthopedics</h3>
+                            <p>Expert care for musculoskeletal conditions, including joint replacements, sports medicine, spine care, and rehabilitation services for injuries and chronic conditions.</p>
+                            
+                        </div>
+                        
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-lungs"></i>
+                            </div>
+                            <h3>Pulmonology</h3>
+                            <p>Specialized care for respiratory conditions, including asthma, COPD, sleep disorders, and interventional pulmonology procedures for diagnosis and treatment.</p>
+                           
+                        </div>
+                        
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-procedures"></i>
+                            </div>
+                            <h3>Nephrology</h3>
+                            <p>Comprehensive care for kidney diseases, including chronic kidney disease management, dialysis services, and kidney transplant evaluation and follow-up care.</p>
+                           
+                        </div>
+                        
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-venus"></i>
+                            </div>
+                            <h3>Obstetrics & Gynecology</h3>
+                            <p>Complete women's health services, including prenatal care, labor and delivery, gynecological surgeries, and routine women's health screenings and treatments.</p>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service Highlight -->
+                <div class="service-highlight">
+                    <div class="highlight-image">
+                        <img src="assests/advcardiac.avif" alt="Advanced Cardiac Care">
+                    </div>
+                    <div class="highlight-content">
+                        <h2>Advanced Cardiac Care Center</h2>
+                        <p>Our state-of-the-art Cardiac Care Center offers comprehensive services for the prevention, diagnosis, and treatment of heart diseases. Equipped with the latest technology and staffed by experienced cardiologists and cardiac surgeons, we provide personalized care for all types of heart conditions.</p>
+                        
+                        <div class="feature-list">
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>24/7 Cardiac Emergency Care</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Advanced Cardiac Imaging</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Interventional Cardiology</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Cardiac Rehabilitation</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Heart Failure Management</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Preventive Cardiology</span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <!-- Diagnostic Services -->
+                <div class="service-category">
+                    <h2><i class="fas fa-microscope"></i> Diagnostic Services</h2>
+                    <p>Our comprehensive diagnostic services utilize advanced technology to provide accurate and timely results, helping our physicians make informed decisions about your care.</p>
+                    
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-x-ray"></i>
+                            </div>
+                            <h3>Imaging Services</h3>
+                            <p>Advanced imaging technologies including MRI, CT scans, X-rays, ultrasound, and mammography to visualize internal structures and diagnose various conditions.</p>
+                            
+                        </div>
+                        
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-flask"></i>
+                            </div>
+                            <h3>Laboratory Services</h3>
+                            <p>Comprehensive clinical laboratory testing, including blood work, urinalysis, microbiology, pathology, and specialized tests to diagnose and monitor health conditions.</p>
+                           
+                        </div>
+                        
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-wave-square"></i>
+                            </div>
+                            <h3>Cardiac Diagnostics</h3>
+                            <p>Specialized tests to evaluate heart function, including ECG, echocardiography, stress testing, Holter monitoring, and cardiac catheterization.</p>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Surgical Services -->
+                <div class="service-category">
+                    <h2><i class="fas fa-procedures"></i> Surgical Services</h2>
+                    <p>Our surgical services combine skilled surgeons, advanced technology, and compassionate care to provide safe and effective surgical interventions for a wide range of conditions.</p>
+                    
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-hospital"></i>
+                            </div>
+                            <h3>General Surgery</h3>
+                            <p>Surgical procedures for conditions affecting the abdomen, digestive tract, endocrine system, and other body systems, including both traditional and minimally invasive approaches.</p>
+                           
+                        </div>
+                        
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <h3>Cardiac Surgery</h3>
+                            <p>Advanced surgical procedures for heart conditions, including coronary artery bypass grafting, valve repair and replacement, and treatment of congenital heart defects.</p>
+                           
+                        </div>
+                        
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <h3>Neurosurgery</h3>
+                            <p>Surgical interventions for conditions affecting the brain, spine, and peripheral nerves, including tumor removal, spine surgery, and treatment of traumatic injuries.</p>
+                            
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-user-md"></i>
+                            </div>
+                            <h3>Plastic & Reconstructive Surgery</h3>
+                            <p>Specialized surgeries to restore form and function after injury, illness, or congenital anomalies, as well as cosmetic procedures to enhance appearance.</p>
+                        </div>
+                        
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-head-side-mask"></i> 
+                            </div>
+                            <h3>ENT Surgery</h3>
+                            <p>Specialized surgical care for ear, nose, and throat disorders, including sinus surgery, tonsillectomy, and procedures to treat hearing loss and voice disorders.</p>
+                        </div>
+                        
+                        
+                        
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-bone"></i>
+                            </div>
+                            <h3>Orthopedic Surgery</h3>
+                            <p>Surgical procedures for musculoskeletal conditions, including joint replacements, arthroscopy, spine surgery, and fracture repair.</p>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Emergency Services -->
+                <div class="service-highlight" style="background-color: var(--background-light-blue);">
+                    <div class="highlight-content">
+                        <h2>24/7 Emergency Care</h2>
+                        <p>Our emergency department is equipped to handle all types of medical emergencies, from minor injuries to life-threatening conditions. Our team of emergency medicine physicians, nurses, and support staff are available 24 hours a day, 7 days a week to provide immediate, high-quality care when you need it most.</p>
+                        
+                        <div class="feature-list">
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Rapid Triage System</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Advanced Life Support</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Trauma Care</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Pediatric Emergency Services</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Cardiac Emergency Care</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Stroke Emergency Protocol</span>
+                            </div>
+                        </div>
+                        
+                        <p style="font-weight: 600; color: var(--primary-color); margin-top: 20px;">In case of emergency, call our emergency hotline: <a href="tel:+911800123456">+91 1800 123 456</a></p>
+                    </div>
+                    <div class="highlight-image">
+                        <img src="assests/emergdept.jpg" alt="Emergency Department">
+                    </div>
+                </div>
+                
+                <!-- Wellness & Preventive Services -->
+                <div class="service-category">
+                    <h2><i class="fas fa-heartbeat"></i> Wellness & Preventive Services</h2>
+                    <p>Our wellness and preventive services focus on maintaining good health, preventing illness, and promoting overall well-being through proactive healthcare approaches.</p>
+                    
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-clipboard-check"></i>
+                            </div>
+                            <h3>Health Checkups</h3>
+                            <p>Comprehensive health assessment packages designed to evaluate your overall health status and detect potential health issues before they become serious.</p>
+                            
+                        </div>
+                        
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-syringe"></i>
+                            </div>
+                            <h3>Vaccination Services</h3>
+                            <p>Preventive immunizations for all age groups, including routine childhood vaccinations, travel vaccines, and seasonal flu shots.</p>
+                            
+                        </div>
+                        
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-apple-alt"></i>
+                            </div>
+                            <h3>Nutrition Counseling</h3>
+                            <p>Personalized dietary guidance from registered dietitians to help manage health conditions, achieve weight goals, and improve overall nutrition.</p>
+                           
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonials -->
+                <div class="testimonial-section">
+                    <h2 class="section-title">What Our Patients Say</h2>
+                    <div class="testimonial-cards">
+                        <div class="testimonial-card">
+                            <p>The cardiac care I received at SafeCare Hospital was exceptional. The doctors took the time to explain my condition and treatment options, and the nursing staff provided compassionate care throughout my stay.</p>
+                            <div class="testimonial-author">
+                                <img src="assests/ser1.jpeg" alt="Rajesh Sharma">
+                                <div class="author-info">
+                                    <h4>Rajesh Sharma</h4>
+                                    <p>Cardiac Patient</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="testimonial-card">
+                            <p>I've been bringing my family to SafeCare for years. Their preventive care services are thorough, and the pediatric department has been wonderful with my children. I trust them completely with our health.</p>
+                            <div class="testimonial-author">
+                                <img src="assests/ser2.jpeg" alt="Priya Patel">
+                                <div class="author-info">
+                                    <h4>Priya Patel</h4>
+                                    <p>Family Care Patient</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="testimonial-card">
+                            <p>After my knee replacement surgery at SafeCare, I was back on my feet faster than I expected. The orthopedic team provided excellent care, and the rehabilitation services helped me regain my mobility quickly.</p>
+                            <div class="testimonial-author">
+                                <img src="assests/ser3.jpeg" alt="Suresh Kumar">
+                                <div class="author-info">
+                                    <h4>Suresh Kumar</h4>
+                                    <p>Orthopedic Patient</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ Section -->
+                <div class="faq-section">
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>How do I schedule an appointment?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>You can schedule an appointment by calling our appointment desk at <a href="tel:+911234567890">+91 1234 567 890</a>, using our online appointment booking system on our website, or visiting our hospital in person. For specialist consultations, you may need a referral from your primary care physician.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>What insurance plans do you accept?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We accept most major insurance plans, including government health schemes. Please contact our billing department at <a href="tel:+911234567891">+91 1234 567 891</a> to verify if your specific insurance plan is accepted. We also offer various payment options for patients without insurance coverage.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>How do I prepare for a surgical procedure?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Your surgeon will provide specific instructions for your procedure. Generally, you may need to fast for a certain period before surgery, adjust medications, arrange for transportation home, and follow specific pre-operative guidelines. Our pre-surgical team will contact you with detailed instructions and answer any questions you may have.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>What should I bring to my hospital appointment?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Please bring your photo ID, insurance card, list of current medications, relevant medical records or test results, and any referral forms if applicable. If you're seeing a specialist, bring any imaging studies or lab results related to your condition.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Do you offer telemedicine services?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, we offer telemedicine consultations for many of our services. Virtual appointments allow you to connect with our healthcare providers from the comfort of your home. To schedule a telemedicine appointment, call our appointment desk or use our online booking system.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- CTA Banner -->
+                <div class="cta-banner">
+                    <h2>Your Health Is Our Priority</h2>
+                    <p>Whether you need routine care, specialized treatment, or emergency services, our team of healthcare professionals is here to provide you with exceptional care tailored to your unique needs.</p>
+                    <div class="cta-buttons">
+                        <a href="branch-details.html" class="btn btn-secondary">Find a Location</a>
+                        <a href="index.html#contact" class="btn btn-secondary">Contact Us</a>
+                    </div>
+                </div>
+                
+                <!-- Navigation Buttons -->
+                <div class="navigation-buttons">
+                    <a href="index.html" class="btn btn-primary">
+                        <i class="fas fa-home"></i> Back to Home
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <h2>SafeCare Hospital</h2>
+                        <p>Dedicated to patient wellness</p>
+                    </div>
+                    <div class="footer-links">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="branch-details.html">Branches</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="index.html#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-contact">
+                        <h3>Contact Us</h3>
+                        <p><i class="fas fa-phone"></i> <a href="tel:+911234567890" style="color: rgba(255, 255, 255, 0.8);">+91 1234567890</a></p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:info@safecarehospital.com" style="color: rgba(255, 255, 255, 0.8);">info@safecarehospital.com</a></p>
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Health Street, Medical District</p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 SafeCare Hospital. All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // FAQ Toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                
+                question.addEventListener('click', () => {
+                    // Close all other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item && otherItem.classList.contains('active')) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trauma Center - SafeCare Hospital</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    /* General Styles */
+:root {
+    --primary-color:  #48cae4;
+    --primary-light:  #0077b6;
+    --secondary-color: #90e0ef;
+    --text-color: #ffffff;
+    --background-alt: #f8f9fa;
+
+    --border-radius: 8px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-alt);
+}
+
+/* Hero Section */
+.hero {
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--primary-light);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+/* About Department */
+.about-department {
+    padding: 40px 20px;
+    background-color: var(--text-color);
+    color: black;
+    text-align: center;
+}
+
+.about-department h2 {
+    color: var(--primary-light);
+    margin-bottom: 20px;
+}
+
+/* Service Grid */
+.services {
+    padding: 40px 20px;
+    background-color: var(--text-color);
+}
+
+.services h2 {
+    text-align: center;
+    color: var(--primary-light);
+    margin-bottom: 20px;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+
+.service-card {
+    background-color: var(--primary-color);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Meet Our Experts */
+.team {
+    padding: 40px 20px;
+    background-color: var(--background-alt);
+}
+
+.team h2 {
+    text-align: center;
+    color: var(--primary-light);
+    margin-bottom: 20px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+
+.team-card {
+    background-color: var(--text-color);
+    padding: 15px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+}
+
+.team-card img {
+    width: 100%;
+    border-radius: var(--border-radius);
+    margin-bottom: 15px;
+}
+
+.team-card h3 {
+    color: var(--primary-light);
+    margin-bottom: 5px;
+}
+.team-card p{
+    color: #0077b6;
+}
+
+/* Why Choose Us */
+.why-choose-us {
+    padding: 40px 20px;
+    background-color: var(--text-color);
+    text-align: center;
+}
+
+.why-choose-us h2 {
+    color: var(--primary-light);
+    margin-bottom: 20px;
+}
+
+.choose-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+
+.choose-card {
+    background-color: var(--primary-color);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.testimonial-section {
+            padding: 50px 0;
+            text-align: center;
+        }
+.testimonial-section h2{
+    color: var(--primary-light);
+}
+
+        
+        .testimonial-cards {
+            display: flex;
+            gap: 30px;
+            overflow-x: auto;
+            padding: 20px 0;
+            scroll-snap-type: x mandatory;
+        }
+        
+        .testimonial-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 25px;
+            box-shadow: var(--box-shadow);
+            min-width: 300px;
+            max-width: 400px;
+            scroll-snap-align: start;
+            flex: 1;
+        }
+        
+        .testimonial-card p {
+            font-style: italic;
+            color: var(--text-light);
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .testimonial-card p::before,
+        .testimonial-card p::after {
+            content: '"';
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .testimonial-author img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--primary-color);
+        }
+        
+        .author-info h4 {
+            color: var(--text-dark);
+            margin-bottom: 5px;
+        }
+        
+        .author-info p {
+            color: var(--text-light);
+            font-style: normal;
+            margin: 0;
+        }
+/* Call to Action */
+.cta {
+    padding: 40px 20px;
+    background-color: var(--primary-color);
+    text-align: center;
+    color: var(--text-color);
+}
+
+.cta h2 {
+    margin-bottom: 10px;
+}
+
+.btn {
+    background-color: var(--secondary-color);
+    padding: 10px 20px;
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+.btn:hover {
+    background-color: var(--primary-light);
+}
+
+    :root {
+  --safecare-blue: #007bff; /* Standard blue for branding */
+  --safecare-blue-light: #90e0ef; /* Navbar background */
+  --safecare-blue-dark: #023e8a;  /* Strong contrast blue for hover */
+}
+.internal-page header {
+  background-color: var(--safecare-blue-light) !important;
+  transition: none !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Keeps the shadow */
+}
+
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  padding-top: 120px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #90e0ef; /* light blue */
+  z-index: 1000;
+  padding: 1rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.logo-text h1 {
+  color: white;
+  margin: 0;
+  font-size: 2rem;
+}
+
+.logo p {
+  margin: 0;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+nav .nav-links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 1rem;
+  padding: 0;
+}
+
+nav .nav-links a {
+  text-decoration: none;
+  color: var(--safecare-blue); /* Normal state */
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav .nav-links a:hover,
+nav .nav-links a.active {
+  color: var(--safecare-blue-dark); /* Darker blue for better contrast */
+  text-decoration: underline;
+}
+
+.branch-header h1 {
+  color: var(--safecare-blue);
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.breadcrumbs a {
+  color: #555;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumbs span {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+  </style>
+  
+  
+ 
+  <body class="internal-page">
+    <div class="page-background">
+        <!-- Header -->
+        <header>
+            <div class="container">
+                <div class="header-top">
+                    <div class="logo-container">
+                        <img src="assests/logo1.png" alt="logo" class="logo"> 
+                        <div class="logo-text">
+                            <h1>SafeCare Hospital</h1>
+                            <p>Dedicated to patient wellness</p>
+                        </div>
+                    </div>
+                </div>
+       
+               <nav>
+                   <ul class="nav-links">
+                       <li><a href="index.html" class="active">Home</a></li>
+                       <li><a href="branch-details.html">Branches</a></li>
+                       <li><a href="services.html">Our Services</a></li>
+                       <li><a href="specialties.html">Specialties</a></li>
+                       <li><a href="family-card.html">Family Card</a></li>
+                       <li><a href="health-checkups.html">Health Checkups</a></li>
+                       <li><a href="appointment.html">Appointment</a></li>
+                       <li><a href="insurance.html">Insurance</a></li>
+                       <li><a href="help.html">Help</a></li>
+                   </ul>
+                   <div class="mobile-menu-btn">
+                       <i class="fas fa-bars"></i>
+                   </div>
+               </nav>
+           </div>
+       </header>   
+<!-- Hero Section -->
+<section class="hero" style="background-image: url('images/hero-trauma.jpg');">
+    <div class="container">
+        <h1>Trauma Center</h1>
+        <p>Providing immediate and expert care during emergencies.</p>
+
+        <br>
+        <br>
+                <div class="breadcrumbs">
+                    <a href="index.html">Home</a> &gt; 
+                    <a href="specialties.html">Specialties</a> &gt; 
+                </div>
+    </div>
+</section>
+
+<!-- About Trauma Care -->
+<section class="about-department">
+    <div class="container">
+        <h2>Why Choose Our Trauma Center?</h2>
+        <p>Our trauma center is equipped with advanced emergency care facilities, ensuring prompt response and critical care for life-threatening situations. We provide specialized services with a multidisciplinary approach to save lives.</p>
+    </div>
+</section>
+
+<!-- Our Services -->
+<section class="services">
+    <div class="container">
+        <h2>Our Trauma Care Services</h2>
+        <div class="service-grid">
+            <div class="service-card">
+                <h3>Emergency Surgery</h3>
+                <p>Timely and precise surgical intervention for critical injuries.</p>
+            </div>
+            <div class="service-card">
+                <h3>Critical Care</h3>
+                <p>Intensive monitoring and support for severely injured patients.</p>
+            </div>
+            <div class="service-card">
+                <h3>Orthopedic Trauma</h3>
+                <p>Expert treatment of fractures, dislocations, and musculoskeletal trauma.</p>
+            </div>
+            <div class="service-card">
+                <h3>Neurotrauma Care</h3>
+                <p>Advanced management of head and spine injuries.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Meet Our Experts -->
+<section class="team">
+    <div class="container">
+        <h2>Meet Our Trauma Specialists</h2>
+        <div class="team-grid">
+            <div class="team-card">
+                <img src="assests/tcd1.jpg" alt="Dr. Arjun Rao">
+                <h3>Dr. Arjun Rao</h3>
+                <p>Head of Trauma Surgery<br>MBBS, MS, MCh (Trauma Surgery) - 20+ years of experience</p>
+            </div>
+            <div class="team-card">
+                <img src="assests/tcd2.jpg" alt="Dr. Kavita Nair">
+                <h3>Dr. Kavita Nair</h3>
+                <p>Emergency Medicine Specialist<br>MBBS, MD (Emergency Medicine) - 15+ years of experience</p>
+            </div>
+            <div class="team-card">
+                <img src="assests/tcd3.jpg" alt="Dr. Sameer Gupta">
+                <h3>Dr. Sameer Gupta</h3>
+                <p>Orthopedic Trauma Specialist<br>MBBS, MS (Orthopedics) - 18+ years of experience</p>
+            </div>
+            <div class="team-card">
+                <img src="assests/tcd4.jpg" alt="Dr. Neha Kapoor">
+                <h3>Dr. Neha Kapoor</h3>
+                <p>Neurotrauma Consultant<br>MBBS, MCh (Neurosurgery) - 12+ years of experience</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="why-choose-us">
+    <div class="container">
+        <h2>Why Choose SafeCare Trauma Center?</h2>
+        <div class="choose-grid">
+            <div class="choose-card">
+                <h3>24/7 Emergency Care</h3>
+                <p>Rapid response and expert care during emergencies.</p>
+            </div>
+            <div class="choose-card">
+                <h3>Advanced Surgical Facilities</h3>
+                <p>State-of-the-art operating rooms for critical interventions.</p>
+            </div>
+            <div class="choose-card">
+                <h3>Multidisciplinary Expertise</h3>
+                <p>Collaborative care from highly trained specialists.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Patient Testimonials -->
+<div class="testimonial-section">
+    <div class="container">
+        <h2>What Our Patients Say</h2>
+        <div class="testimonial-cards">
+            <div class="testimonial-card">
+                <p>"After a serious road accident, the trauma care team at SafeCare responded immediately and saved my life. Their prompt action and support were beyond words."</p>
+                <div class="testimonial-author">
+                    <img src="assests/trauma1.jpg" alt="Rajesh Khanna">
+                    <div class="author-info">
+                        <h4>Mr. Rajesh Khanna</h4>
+                        <p>Trauma Patient</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <p>"I was brought into the trauma center with multiple fractures. The doctors and staff at SafeCare handled everything with such efficiency and empathy—it truly made my recovery smoother."</p>
+                <div class="testimonial-author">
+                    <img src="assests/trauma2.jpg" alt="Megha Raut">
+                    <div class="author-info">
+                        <h4>Mrs. Megha Raut</h4>
+                        <p>Emergency Trauma Patient</p>
+                    </div>
+                </div>
+            </div>  
+
+            <div class="testimonial-card">
+                <p>"The trauma unit provided timely critical care after my workplace injury. From surgery to ICU and follow-up, the entire team ensured my safety and healing."</p>
+                <div class="testimonial-author">
+                    <img src="assests/trauma3.jpg" alt="Arun Patel">
+                    <div class="author-info">
+                        <h4>Mr. Arun Patel</h4>
+                        <p>Workplace Injury Patient</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>SafeCare Hospital</h2>
+                <p>Dedicated to patient wellness</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="branch-details.html">Branches</a></li>
+                    <li><a href="index.html#our-services">Services</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-phone"></i> +91 1234567890</p>
+                <p><i class="fas fa-envelope"></i> info@safecarehospital.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Health Street, Medical District</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 SafeCare Hospital. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

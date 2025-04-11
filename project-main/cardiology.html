@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardiology - SafeCare Hospital</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    /* General Styles */
+:root {
+    --primary-color:  #48cae4;
+    --primary-light:  #0077b6;
+    --secondary-color: #90e0ef;
+    --text-color: #ffffff;
+    --background-alt: #f8f9fa;
+
+    --border-radius: 8px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-alt);
+}
+
+/* Hero Section */
+.hero {
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--primary-light);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+/* About Department */
+.about-department {
+    padding: 40px 20px;
+    background-color: var(--text-color);
+    color: black;
+    text-align: center;
+}
+
+.about-department h2 {
+    color: var(--primary-light);
+    margin-bottom: 20px;
+}
+
+/* Service Grid */
+.services {
+    padding: 40px 20px;
+    background-color: var(--text-color);
+}
+
+.services h2 {
+    text-align: center;
+    color: var(--primary-light);
+    margin-bottom: 20px;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+
+.service-card {
+    background-color: var(--primary-color);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Meet Our Experts */
+.team {
+    padding: 40px 20px;
+    background-color: var(--background-alt);
+}
+
+.team h2 {
+    text-align: center;
+    color: var(--primary-light);
+    margin-bottom: 20px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+
+.team-card {
+    background-color: var(--text-color);
+    padding: 15px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+}
+
+.team-card img {
+    width: 100%;
+    border-radius: var(--border-radius);
+    margin-bottom: 15px;
+}
+
+.team-card h3 {
+    color: var(--primary-light);
+    margin-bottom: 5px;
+}
+.team-card p{
+    color: #0077b6;
+}
+
+/* Why Choose Us */
+.why-choose-us {
+    padding: 40px 20px;
+    background-color: var(--text-color);
+    text-align: center;
+}
+
+.why-choose-us h2 {
+    color: var(--primary-light);
+    margin-bottom: 20px;
+}
+
+.choose-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+
+.choose-card {
+    background-color: var(--primary-color);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.testimonial-section {
+            padding: 50px 0;
+            text-align: center;
+        }
+.testimonial-section h2{
+    color: var(--primary-light);
+}
+
+        
+        .testimonial-cards {
+            display: flex;
+            gap: 30px;
+            overflow-x: auto;
+            padding: 20px 0;
+            scroll-snap-type: x mandatory;
+        }
+        
+        .testimonial-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 25px;
+            box-shadow: var(--box-shadow);
+            min-width: 300px;
+            max-width: 400px;
+            scroll-snap-align: start;
+            flex: 1;
+        }
+        
+        .testimonial-card p {
+            font-style: italic;
+            color: var(--text-light);
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .testimonial-card p::before,
+        .testimonial-card p::after {
+            content: '"';
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .testimonial-author img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--primary-color);
+        }
+        
+        .author-info h4 {
+            color: var(--text-dark);
+            margin-bottom: 5px;
+        }
+        
+        .author-info p {
+            color: var(--text-light);
+            font-style: normal;
+            margin: 0;
+        }
+/* Call to Action */
+.cta {
+    padding: 40px 20px;
+    background-color: var(--primary-color);
+    text-align: center;
+    color: var(--text-color);
+}
+
+.cta h2 {
+    margin-bottom: 10px;
+}
+
+.btn {
+    background-color: var(--secondary-color);
+    padding: 10px 20px;
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+.btn:hover {
+    background-color: var(--primary-light);
+}
+
+    :root {
+  --safecare-blue: #007bff; /* Standard blue for branding */
+  --safecare-blue-light: #90e0ef; /* Navbar background */
+  --safecare-blue-dark: #023e8a;  /* Strong contrast blue for hover */
+}
+.internal-page header {
+  background-color: var(--safecare-blue-light) !important;
+  transition: none !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Keeps the shadow */
+}
+
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  padding-top: 120px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #90e0ef; /* light blue */
+  z-index: 1000;
+  padding: 1rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.logo-text h1 {
+  color: white;
+  margin: 0;
+  font-size: 2rem;
+}
+
+.logo p {
+  margin: 0;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+nav .nav-links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 1rem;
+  padding: 0;
+}
+
+nav .nav-links a {
+  text-decoration: none;
+  color: var(--safecare-blue); /* Normal state */
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav .nav-links a:hover,
+nav .nav-links a.active {
+  color: var(--safecare-blue-dark); /* Darker blue for better contrast */
+  text-decoration: underline;
+}
+
+.branch-header h1 {
+  color: var(--safecare-blue);
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.breadcrumbs a {
+  color: #555;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumbs span {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+  </style>
+  
+  
+ 
+  <body class="internal-page">
+    <div class="page-background">
+        <!-- Header -->
+        <header>
+            <div class="container">
+                <div class="header-top">
+                    <div class="logo-container">
+                        <img src="assests/logo1.png" alt="logo" class="logo"> 
+                        <div class="logo-text">
+                            <h1>SafeCare Hospital</h1>
+                            <p>Dedicated to patient wellness</p>
+                        </div>
+                    </div>
+                </div>
+       
+               <nav>
+                   <ul class="nav-links">
+                       <li><a href="index.html" class="active">Home</a></li>
+                       <li><a href="branch-details.html">Branches</a></li>
+                       <li><a href="services.html">Our Services</a></li>
+                       <li><a href="specialties.html">Specialties</a></li>
+                       <li><a href="family-card.html">Family Card</a></li>
+                       <li><a href="health-checkups.html">Health Checkups</a></li>
+                       <li><a href="appointment.html">Appointment</a></li>
+                       <li><a href="insurance.html">Insurance</a></li>
+                       <li><a href="help.html">Help</a></li>
+                   </ul>
+                   <div class="mobile-menu-btn">
+                       <i class="fas fa-bars"></i>
+                   </div>
+               </nav>
+           </div>
+       </header>   
+<!-- Hero Section -->
+<section class="hero" style="background-image: url('images/hero-cardiology.jpg');">
+    <div class="container">
+        <h1>Cardiology Department</h1>
+        <p>Comprehensive heart care with world-class technology and expert cardiologists.</p>
+
+<br>
+<br>
+        <div class="breadcrumbs">
+            <a href="index.html">Home</a> &gt; 
+            <a href="specialties.html">Specialties</a> &gt; 
+        </div>
+    </div>
+</section>
+
+<!-- About Cardiology -->
+<section class="about-department">
+    <div class="container">
+        <h2>Why Choose Our Cardiology Services?</h2>
+        <p>Our cardiology department is renowned for providing top-tier care, from prevention to advanced surgical procedures. We use state-of-the-art technology to ensure the best outcomes for our patients.</p>
+    </div>
+</section>
+
+<!-- Our Services -->
+<section class="services">
+    <div class="container">
+        <h2>Our Cardiology Services</h2>
+        <div class="service-grid">
+            <div class="service-card">
+                <h3>Coronary Angiography</h3>
+                <p>Minimally invasive diagnostics to assess the condition of your heart.</p>
+            </div>
+            <div class="service-card">
+                <h3>Angioplasty & Stenting</h3>
+                <p>Advanced procedures to open clogged arteries and restore blood flow.</p>
+            </div>
+            <div class="service-card">
+                <h3>Pacemaker Implantation</h3>
+                <p>Life-saving devices to regulate abnormal heart rhythms.</p>
+            </div>
+            <div class="service-card">
+                <h3>Cardiac Rehabilitation</h3>
+                <p>Post-procedure recovery programs focused on restoring optimal health.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Meet Our Experts -->
+<section class="team">
+    <div class="container">
+        <h2>Meet Our Cardiologists</h2>
+        <div class="team-grid">
+            <div class="team-card">
+                <img src="assests/dr-rajesh-kumar.jpg" alt="Dr. Rajesh Kumar">
+                <h3>Dr. Rajesh Kumar</h3>
+                <p>Senior Consultant - Cardiology<br>MBBS, MD, DM (Cardiology) - 20+ years of experience</p>
+            </div>
+            <div class="team-card">
+                <img src="assests/dr-anita-sharma.jpg" alt="Dr. Anita Sharma">
+                <h3>Dr. Anita Sharma</h3>
+                <p>Interventional Cardiologist<br>MBBS, MD, Fellowship in Cardiac Sciences - 15+ years of experience</p>
+            </div>
+            <div class="team-card">
+                <img src="assests/dr-amit-verma.jpg" alt="Dr. Amit Verma">
+                <h3>Dr. Amit Verma</h3>
+                <p>Electrophysiologist<br>MBBS, MD, DNB (Cardiology) - 18+ years of experience</p>
+            </div>
+            <div class="team-card">
+                <img src="assests/dr-sonal-mehta.jpg" alt="Dr. Sonal Mehta">
+                <h3>Dr. Sonal Mehta</h3>
+                <p>Heart Failure Specialist<br>MBBS, DM (Cardiology) - 12+ years of experience</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="why-choose-us">
+    <div class="container">
+        <h2>Why Choose SafeCare Hospital?</h2>
+        <div class="choose-grid">
+            <div class="choose-card">
+                <h3>24/7 Emergency Cardiac Care</h3>
+                <p>Rapid response team available round the clock for critical situations.</p>
+            </div>
+            <div class="choose-card">
+                <h3>State-of-the-Art Facilities</h3>
+                <p>Equipped with modern Cath Labs and Hybrid Operating Rooms.</p>
+            </div>
+            <div class="choose-card">
+                <h3>Personalized Treatment Plans</h3>
+                <p>Customized care plans designed for each patient's unique condition.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials -->
+<div class="testimonial-section">
+    <div class="container">
+        <h2 >What Our Patients Say</h2>
+        <div class="testimonial-cards">
+            <div class="testimonial-card">
+                <p>The doctors and staff at SafeCare Cardiology gave me a new lease on life. I am so grateful for their expertise and compassion.</p>
+                <div class="testimonial-author">
+                    <img src="assests/ser11.jpg" alt="Arvind Mehta">
+                    <div class="author-info">
+                        <h4>Mr. Arvind Mehta</h4>
+                        <p>Cardiology Patient</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <p>Excellent facilities and warm staff. My post-surgery recovery was smooth thanks to their care.</p>
+                <div class="testimonial-author">
+                    <img src="assests/ser12.jpeg" alt="Sunita Rao">
+                    <div class="author-info">
+                        <h4>Mrs. Sunita Rao</h4>
+                        <p>Post-Surgery Patient</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <p>The care team was amazing with me. From diagnosis to recovery, they made sure we felt supported every step of the way.</p>
+                <div class="testimonial-author">
+                    <img src="assests/ver13.avif" alt="Kavita Joshi">
+                    <div class="author-info">
+                        <h4>Mrs. Kavita Joshi</h4>
+                        <p>Cardiology Patient</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>SafeCare Hospital</h2>
+                <p>Dedicated to patient wellness</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="branch-details.html">Branches</a></li>
+                    <li><a href="index.html#our-services">Services</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-phone"></i> +91 1234567890</p>
+                <p><i class="fas fa-envelope"></i> info@safecarehospital.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Health Street, Medical District</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 SafeCare Hospital. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+</body>
+
+</html>

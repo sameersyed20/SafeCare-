@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help & Support - SafeCare Hospital</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="additional-pages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<style>
+    :root {
+  --safecare-blue: #007bff; /* Standard blue for branding */
+  --safecare-blue-light: #90e0ef; /* Navbar background */
+  --safecare-blue-dark: #023e8a;  /* Strong contrast blue for hover */
+}
+.internal-page header {
+  background-color: var(--safecare-blue-light) !important;
+  transition: none !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Keeps the shadow */
+}
+
+
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  padding-top: 120px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #90e0ef; /* light blue */
+  z-index: 1000;
+  padding: 1rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.logo-text h1 {
+  color: white;
+  margin: 0;
+  font-size: 2rem;
+}
+
+.logo p {
+  margin: 0;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+nav .nav-links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 1rem;
+  padding: 0;
+}
+
+nav .nav-links a {
+  text-decoration: none;
+  color: var(--safecare-blue); /* Normal state */
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav .nav-links a:hover,
+nav .nav-links a.active {
+  color: var(--safecare-blue-dark); /* Darker blue for better contrast */
+  text-decoration: underline;
+}
+
+.branch-header h1 {
+  color: var(--safecare-blue);
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.breadcrumbs a {
+  color: #555;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumbs span {
+  font-size: 0.9rem;
+  color: #888;
+}
+.page-section {
+    padding: 100px 0;
+    position: relative;
+    z-index: 2;
+}
+
+
+
+  </style>
+  
+  
+ 
+  <body class="internal-page">
+    <div class="page-background">
+        <!-- Header -->
+        <header>
+            <div class="container">
+                <div class="header-top">
+                    <div class="logo-container">
+                        <img src="assests/logo1.png" alt="logo" class="logo"> 
+                        <div class="logo-text">
+                            <h1>SafeCare Hospital</h1>
+                            <p>Dedicated to patient wellness</p>
+                        </div>
+                    </div>
+                </div>
+       
+               <nav>
+                   <ul class="nav-links">
+                       <li><a href="index.html" class="active">Home</a></li>
+                       <li><a href="branch-details.html">Branches</a></li>
+                       <li><a href="services.html">Our Services</a></li>
+                       <li><a href="specialties.html">Specialties</a></li>
+                       <li><a href="family-card.html">Family Card</a></li>
+                       <li><a href="health-checkups.html">Health Checkups</a></li>
+                       <li><a href="appointment.html">Appointment</a></li>
+                       <li><a href="insurance.html">Insurance</a></li>
+                       <li><a href="help.html">Help</a></li>
+                   </ul>
+                   <div class="mobile-menu-btn">
+                       <i class="fas fa-bars"></i>
+                   </div>
+               </nav>
+           </div>
+       </header> 
+
+        <!-- Help Section -->
+        <section class="page-section">
+            <div class="container">
+                <div class="section-header">
+                    <h1>Help & Support</h1>
+                    <div class="breadcrumbs">
+                        <a href="index.html">Home</a> &gt; 
+                        <span>Help</span>
+                    </div>
+                </div>
+                
+                <!-- Help Options -->
+                <div class="help-options">
+                    <div class="help-option">
+                        <div class="help-icon">
+                            <i class="fas fa-question-circle"></i>
+                        </div>
+                        <h3>FAQs</h3>
+                        <p>Find answers to commonly asked questions</p>
+                        <a href="#faqs" class="btn btn-secondary">View FAQs</a>
+                    </div>
+                    
+                    <div class="help-option">
+                        <div class="help-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3>Contact Support</h3>
+                        <p>Reach out to our support team</p>
+                        <a href="#contact-form" class="btn btn-secondary">Contact Us</a>
+                    </div>
+                    
+                    <div class="help-option">
+                        <div class="help-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Find a Branch</h3>
+                        <p>Locate our hospitals and clinics</p>
+                        <a href="branch-details.html" class="btn btn-secondary">View Branches</a>
+                    </div>
+                    
+                    <div class="help-option">
+                        <div class="help-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <h3>Appointments</h3>
+                        <p>Book, reschedule, or cancel appointments</p>
+                        <a href="appointment.html" class="btn btn-secondary">Manage Appointments</a>
+                    </div>
+                </div>
+                
+                <!-- Search Section -->
+                <div class="search-section">
+                    <h2>How can we help you today?</h2>
+                    <div class="search-container">
+                        <input type="text" id="help-search" placeholder="Search for help topics...">
+                        <button type="button" class="search-btn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                    <div class="popular-searches">
+                        <span>Popular searches:</span>
+                        <a href="#" data-search="appointment">Appointments</a>
+                        <a href="#" data-search="insurance">Insurance</a>
+                        <a href="#" data-search="billing">Billing</a>
+                        <a href="#" data-search="medical records">Medical Records</a>
+                    </div>
+                </div>
+                
+                <!-- FAQ Section -->
+                <div class="content-section" id="faqs">
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                    
+                    <div class="faq-categories">
+                        <button class="category-btn active" data-category="general">General</button>
+                        <button class="category-btn" data-category="appointments">Appointments</button>
+                        <button class="category-btn" data-category="insurance">Insurance & Billing</button>
+                        <button class="category-btn" data-category="services">Services</button>
+                        <button class="category-btn" data-category="medical">Medical Information</button>
+                    </div>
+                    
+                    <div class="faq-container">
+                        <!-- General FAQs -->
+                        <div class="faq-category active" id="general-faqs">
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <span>What are the visiting hours at SafeCare Hospital?</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>Our general visiting hours are from 10:00 AM to 8:00 PM daily. However, visiting hours may vary for different departments such as ICU, NICU, and post-operative care units. Please check with the specific department or call our helpline for detailed information.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <span>How do I find a doctor at SafeCare Hospital?</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>You can find a doctor at SafeCare Hospital in several ways:</p>
+                                    <ul>
+                                        <li>Use the "Find a Doctor" feature on our website to search by specialty, name, or location</li>
+                                        <li>Call our appointment helpline at +91 1234 567 890</li>
+                                        <li>Visit any of our branches and inquire at the information desk</li>
+                                        <li>Ask your primary care physician for a referral to a specialist at SafeCare Hospital</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <span>Is parking available at SafeCare Hospital?</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>Yes, all our branches have dedicated parking facilities for patients and visitors. Most branches offer free parking for the first 2 hours, with nominal charges thereafter. Valet parking services are also available at select locations for your convenience.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <span>How can I provide feedback about my experience?</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>We value your feedback and continuously strive to improve our services. You can provide feedback in the following ways:</p>
+                                    <ul>
+                                        <li>Fill out the feedback form available at all our branches</li>
+                                        <li>Use the contact form on our website</li>
+                                        <li>Email us at feedback@safecarehospital.com</li>
+                                        <li>Call our feedback hotline at +91 1234 567 892</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Appointments FAQs -->
+                        <div class="faq-category" id="appointments-faqs">
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <span>How do I schedule an appointment?</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>You can schedule an appointment in several ways:</p>
+                                    <ul>
+                                        <li>Online: Use our appointment booking system on our website</li>
+                                        <li>Phone: Call our appointment desk at +91 1234 567 890</li>
+                                        <li>In-person: Visit any of our branches and schedule at the appointment desk</li>
+                                        <li>Mobile App: Download our mobile app and book appointments on the go</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <span>How do I reschedule or cancel my appointment?</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>To reschedule or cancel an appointment, please use one of the following methods:</p>
+                                    <ul>
+                                        <li>Log in to your account on our website and manage your appointments</li>
+                                        <li>Call our appointment desk at +91 1234 567 890</li>
+                                        <li>Use our mobile app to modify your appointment</li>
+                                    </ul>
+                                    <p>We request that you notify us at least 24 hours in advance if you need to reschedule or cancel your appointment.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <span>What should I bring to my appointment?</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>Please bring the following items to your appointment:</p>
+                                    <ul>
+                                        <li>Photo ID (Aadhar Card, PAN Card, Passport, etc.)</li>
+                                        <li>Insurance card (if applicable)</li>
+                                        <li>List of current medications</li>
+                                        <li>Previous medical records, test results, or imaging studies related to your condition</li>
+                                        <li>Referral letter from your doctor (if applicable)</li>
+                                        <li>Payment method for any co-pays or fees not covered by insurance</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Insurance & Billing FAQs -->
+                        <div class="faq-category" id="insurance-faqs">
+                            <!-- Insurance FAQs would go here -->
+                        </div>
+                        
+                        <!-- Services FAQs -->
+                        <div class="faq-category" id="services-faqs">
+                            <!-- Services FAQs would go here -->
+                        </div>
+                        
+                        <!-- Medical Information FAQs -->
+                        <div class="faq-category" id="medical-faqs">
+                            <!-- Medical FAQs would go here -->
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="content-section" id="contact-form">
+                    <h2 class="section-title">Contact Support</h2>
+                    <p class="section-description">Can't find what you're looking for? Reach out to our support team for assistance.</p>
+                    
+                    <div class="form-container">
+                        <form id="support-form" class="support-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="full-name">Full Name <span class="required">*</span></label>
+                                    <input type="text" id="full-name" name="full-name" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="phone">Phone Number <span class="required">*</span></label>
+                                    <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email Address <span class="required">*</span></label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="query-type">Query Type <span class="required">*</span></label>
+                                    <select id="query-type" name="query-type" required>
+                                        <option value="">Select Query Type</option>
+                                        <option value="general">General Inquiry</option>
+                                        <option value="appointment">Appointment Related</option>
+                                        <option value="billing">Billing & Insurance</option>
+                                        <option value="medical">Medical Records</option>
+                                        <option value="feedback">Feedback/Suggestions</option>
+                                        <option value="complaint">Complaint</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Subject <span class="required">*</span></label>
+                                <input type="text" id="subject" name="subject" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Message <span class="required">*</span></label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="attachment">Attachment (if any)</label>
+                                <input type="file" id="attachment" name="attachment">
+                                <p class="file-note">Max file size: 5MB. Allowed formats: PDF, JPG, PNG</p>
+                            </div>
+                            
+                            <div class="form-group terms-checkbox">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="terms" name="terms" required>
+                                    <span>I agree to the <a href="#" class="terms-link">terms and conditions</a> and consent to the processing of my personal data.</span>
+                                </label>
+                            </div>
+                            
+                            <div class="form-submit">
+                                <button type="submit" class="btn btn-primary">Submit Query</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- Contact Information -->
+                <div class="content-section">
+                    <h2 class="section-title">Other Ways to Reach Us</h2>
+                    
+                    <div class="contact-cards">
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <h3>Call Us</h3>
+                            <p>General Helpline: <a href="tel:+911234567890">+91 1234 567 890</a></p>
+                            <p>Emergency: <a href="tel:+911800123456">+91 1800 123 456</a></p>
+                            <p>Appointment Desk: <a href="tel:+911234567891">+91 1234 567 891</a></p>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h3>Email Us</h3>
+                            <p>General Inquiries: <a href="mailto:info@safecarehospital.com">info@safecarehospital.com</a></p>
+                            <p>Support: <a href="mailto:support@safecarehospital.com">support@safecarehospital.com</a></p>
+                            <p>Feedback: <a href="mailto:feedback@safecarehospital.com">feedback@safecarehospital.com</a></p>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <h3>Live Chat</h3>
+                            <p>Chat with our support team in real-time during business hours.</p>
+                            <a href="#" class="btn btn-secondary chat-btn">Start Chat</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Emergency Information -->
+                <div class="emergency-section">
+                    <div class="emergency-icon">
+                        <i class="fas fa-ambulance"></i>
+                    </div>
+                    <div class="emergency-content">
+                        <h2>Emergency? Call Our 24/7 Helpline</h2>
+                        <p>For medical emergencies, please call our emergency hotline immediately.</p>
+                        <a href="tel:+911800123456" class="emergency-number">+91 1800 123 456</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <h2>SafeCare Hospital</h2>
+                        <p>Dedicated to patient wellness</p>
+                    </div>
+                    <div class="footer-links">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="branch-details.html">Branches</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="appointment.html">Appointment</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-contact">
+                        <h3>Contact Us</h3>
+                        <p><i class="fas fa-phone"></i> <a href="tel:+911234567890" style="color: rgba(255, 255, 255, 0.8);">+91 1234567890</a></p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:info@safecarehospital.com" style="color: rgba(255, 255, 255, 0.8);">info@safecarehospital.com</a></p>
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Health Street, Medical District</p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 SafeCare Hospital. All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="additional-pages.js"></script>
+</body>
+</html>

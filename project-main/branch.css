@@ -1,0 +1,90 @@
+:root {
+    --primary-color: #0077b6;
+    --primary-light: #90e0ef;
+    --secondary-color: #48cae4;
+    --text-color: #ffffff;
+    --background-alt: #f8f9fa;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+}
+
+.branch-title {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+/* Branch Grid */
+.branch-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.branch-card {
+    background: var(--primary-light);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: var(--transition);
+    text-align: center;
+}
+
+.branch-card:hover {
+    background: var(--secondary-color);
+}
+
+/* Branch Details Section */
+.branch-info {
+    margin-top: 30px;
+    padding: 20px;
+    background: #fff;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    text-align: left;
+}
+
+.branch-info h3 {
+    color: var(--primary-color);
+}
+
+.branch-map {
+    margin-top: 10px;
+}
+
+.back-button {
+    margin-top: 20px;
+}
+
+.back-button a {
+    color: var(--primary-color);
+    font-weight: bold;
+    text-decoration: none;
+}
+.branch-card img {
+    width: 100%; /* Make sure all images fill the card width */
+    height: 150px; /* Set a fixed height for uniformity */
+    object-fit: cover; /* Ensure images fill the space without distortion */
+    border-radius: 10px; /* Optional: Add rounded corners for aesthetics */
+}
+

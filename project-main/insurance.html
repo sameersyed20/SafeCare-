@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance - SafeCare Hospital</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="additional-pages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<style>
+    :root {
+   --safecare-blue: #007bff; /* Standard blue for branding */
+   --safecare-blue-light: #90e0ef; /* Navbar background */
+   --safecare-blue-dark: #023e8a;  /* Strong contrast blue for hover */
+ }
+ .internal-page header {
+   background-color: var(--safecare-blue-light) !important;
+   transition: none !important;
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Keeps the shadow */
+ }
+ 
+ 
+ body {
+   margin: 0;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   background-color: #f8f9fa;
+   padding-top: 120px;
+ }
+ 
+ header {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   background-color: #90e0ef; /* light blue */
+   z-index: 1000;
+   padding: 1rem 0;
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+   transition: background-color 0.3s ease;
+ }
+ 
+ 
+ .container {
+   max-width: 1200px;
+   margin: auto;
+   padding: 0 20px;
+ }
+ 
+ .logo-text h1 {
+   color: white;
+   margin: 0;
+   font-size: 2rem;
+ }
+ 
+ .logo p {
+   margin: 0;
+   color: #555;
+   font-size: 0.9rem;
+ }
+ 
+ nav .nav-links {
+   list-style: none;
+   display: flex;
+   flex-wrap: wrap;
+   gap: 15px;
+   margin-top: 1rem;
+   padding: 0;
+ }
+ 
+ nav .nav-links a {
+   text-decoration: none;
+   color: var(--safecare-blue); /* Normal state */
+   font-weight: 500;
+   transition: color 0.3s ease;
+ }
+ 
+ nav .nav-links a:hover,
+ nav .nav-links a.active {
+   color: var(--safecare-blue-dark); /* Darker blue for better contrast */
+   text-decoration: underline;
+ }
+ 
+ .branch-header h1 {
+   color: var(--safecare-blue);
+   font-size: 2.5rem;
+   margin-bottom: 10px;
+ }
+ 
+ .breadcrumbs a {
+   color: #555;
+   text-decoration: none;
+   font-size: 0.9rem;
+ }
+ 
+ .breadcrumbs a:hover {
+   text-decoration: underline;
+ }
+ 
+ .breadcrumbs span {
+   font-size: 0.9rem;
+   color: #888;
+ }
+ 
+   </style>
+   
+   
+   <body class="internal-page">
+     <div class="page-background">
+         <!-- Header -->
+         <header>
+             <div class="container">
+                 <div class="header-top">
+                     <div class="logo-container">
+                         <img src="assests/logo1.png" alt="logo" class="logo"> 
+                         <div class="logo-text">
+                             <h1>SafeCare Hospital</h1>
+                             <p>Dedicated to patient wellness</p>
+                         </div>
+                     </div>
+                 </div>
+        
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="branch-details.html">Branches</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="specialties.html">Specialties</a></li>
+                        <li><a href="family-card.html">Family Card</a></li>
+                        <li><a href="health-checkups.html">Health Checkups</a></li>
+                        <li><a href="appointment.html">Appointment</a></li>
+                        <li><a href="insurance.html">Insurance</a></li>
+                        <li><a href="help.html">Help</a></li>
+                    </ul>
+                    <div class="mobile-menu-btn">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </nav>
+            </div>
+        </header>      
+        <!-- Insurance Section -->
+        <section class="page-section">
+            <div class="container">
+                <div class="section-header">
+                    <h1>Insurance & Billing</h1>
+                    <div class="breadcrumbs">
+                        <a href="index.html">Home</a> &gt; 
+                        <span>Insurance</span>
+                    </div>
+                </div>
+                
+                <!-- Hero Banner -->
+                <div class="hero-banner">
+                    <div class="banner-content">
+                        <h2>Making Healthcare Accessible</h2>
+                        <p>SafeCare Hospital partners with leading insurance providers to ensure you receive the best care with minimal financial burden.</p>
+                        <a href="#insurance-query" class="btn btn-primary">Insurance Query</a>
+                    </div>
+                    <div class="banner-image">
+                        <img src="https://jupiter.money/blog/wp-content/uploads/2024/06/What_is_Health_Insurance.jpg" alt="Insurance Coverage">
+                    </div>
+                </div>
+                
+                <!-- Insurance Partners -->
+                <div class="content-section">
+                    <h2 class="section-title">Our Insurance Partners</h2>
+                    <p class="section-description">We have tie-ups with major insurance providers to offer cashless treatment facilities.</p>
+                    
+                    <div class="partners-grid">
+                        <div class="partner-card">
+                            <div class="partner-logo">
+                                <img src="https://www.livelaw.in/h-upload/2023/07/29/483571-star-health-insurance.jpg" alt="Star Health Insurance">
+                            </div>
+                            <h3>Star Health Insurance</h3>
+                        </div>
+                        
+                        <div class="partner-card">
+                            <div class="partner-logo">
+                                <img src="https://static.theprint.in/wp-content/uploads/2023/10/ANI-20231016090315.jpg" alt="HDFC ERGO">
+                            </div>
+                            <h3>HDFC ERGO</h3>
+                        </div>
+                        
+                        <div class="partner-card">
+                            <div class="partner-logo">
+                                <img src="https://healthysure.in/wp-content/uploads/2023/08/icici-lombard.jpg" alt="ICICI Lombard">
+                            </div>
+                            <h3>ICICI Lombard</h3>
+                        </div>
+                        
+                        <div class="partner-card">
+                            <div class="partner-logo">
+                                <img src="https://bsmedia.business-standard.com/_media/bs/img/article/2024-06/25/full/20240625180557.jpg" alt="Bajaj Allianz">
+                            </div>
+                            <h3>Bajaj Allianz</h3>
+                        </div>
+                        
+                        <div class="partner-card">
+                            <div class="partner-logo">
+                                <img src="https://icsi.newindia.co.in/images/nialogo-org.jpg" alt="New India Assurance">
+                            </div>
+                            <h3>New India Assurance</h3>
+                        </div>
+                        
+                        <div class="partner-card">
+                            <div class="partner-logo">
+                                <img src="https://cdn.healthtechalpha.com/static/resized/social_media_image/corporatesById/2137.png" alt="Aditya Birla Health Insurance">
+                            </div>
+                            <h3>Aditya Birla Health</h3>
+                        </div>
+                        
+                        <div class="partner-card">
+                            <div class="partner-logo">
+                                <img src="https://5.imimg.com/data5/PZ/IH/PM/SELLER-97111057/max-bupa-health-insurance.jpg" alt="Max Bupa">
+                            </div>
+                            <h3>Max Bupa</h3>
+                        </div>
+                        
+                        <div class="partner-card">
+                            <div class="partner-logo">
+                                <img src="https://buysellunlistedshares.com/wp-content/uploads/2019/06/religare-health-insurance-co-ltd-vastrapur-ahmedabad-insurance-agents-1weoif0.jpg" alt="Religare Health">
+                            </div>
+                            <h3>Religare Health</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="note-box">
+                        <p><strong>Note:</strong> We also accept many other insurance providers not listed above. Please contact our insurance desk for specific inquiries.</p>
+                    </div>
+                </div>
+                
+                <!-- Government Schemes -->
+                <div class="content-section">
+                    <h2 class="section-title">Government Health Schemes</h2>
+                    <p class="section-description">We are empaneled with various government health schemes to provide affordable healthcare.</p>
+                    
+                    <div class="schemes-grid">
+                        <div class="scheme-card">
+                            <div class="scheme-icon">
+                                <i class="fas fa-hospital-user"></i>
+                            </div>
+                            <h3>Ayushman Bharat</h3>
+                            <p>Pradhan Mantri Jan Arogya Yojana (PM-JAY) providing coverage up to ₹5 lakhs per family per year.</p>
+                        </div>
+                        
+                        <div class="scheme-card">
+                            <div class="scheme-icon">
+                                <i class="fas fa-user-shield"></i>
+                            </div>
+                            <h3>CGHS</h3>
+                            <p>Central Government Health Scheme for central government employees, pensioners, and their dependents.</p>
+                        </div>
+                        
+                        <div class="scheme-card">
+                            <div class="scheme-icon">
+                                <i class="fas fa-hands-helping"></i>
+                            </div>
+                            <h3>ECHS</h3>
+                            <p>Ex-Servicemen Contributory Health Scheme for ex-servicemen and their dependents.</p>
+                        </div>
+                        
+                        <div class="scheme-card">
+                            <div class="scheme-icon">
+                                <i class="fas fa-heartbeat"></i>
+                            </div>
+                            <h3>State Government Schemes</h3>
+                            <p>Various state-specific health insurance schemes like Aarogyasri, Mahatma Jyotiba Phule Jan Arogya Yojana, and other regional healthcare programs.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Insurance Process -->
+                <div class="content-section">
+                    <h2 class="section-title">Insurance Process</h2>
+                    <p class="section-description">Understanding how to use your insurance at SafeCare Hospital.</p>
+                    
+                    <div class="tabs-container">
+                        <div class="tabs-header">
+                            <button class="tab-button active" data-tab="cashless">Cashless Treatment</button>
+                            <button class="tab-button" data-tab="reimbursement">Reimbursement</button>
+                            <button class="tab-button" data-tab="preauth">Pre-Authorization</button>
+                        </div>
+                        
+                        <div class="tabs-content">
+                            <div class="tab-pane active" id="cashless">
+                                <div class="process-steps">
+                                    <div class="step-item">
+                                        <div class="step-number">1</div>
+                                        <div class="step-content">
+                                            <h3>Inform at Admission</h3>
+                                            <p>Inform our insurance desk about your intention to avail cashless treatment at the time of admission.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="step-item">
+                                        <div class="step-number">2</div>
+                                        <div class="step-content">
+                                            <h3>Submit Documents</h3>
+                                            <p>Submit your health insurance card, ID proof, and cashless request form provided by the hospital.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="step-item">
+                                        <div class="step-number">3</div>
+                                        <div class="step-content">
+                                            <h3>Pre-Authorization</h3>
+                                            <p>Our insurance desk will coordinate with your insurance provider for pre-authorization.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="step-item">
+                                        <div class="step-number">4</div>
+                                        <div class="step-content">
+                                            <h3>Approval & Treatment</h3>
+                                            <p>Once approved, you can proceed with the treatment without paying the covered amount.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="step-item">
+                                        <div class="step-number">5</div>
+                                        <div class="step-content">
+                                            <h3>Settlement</h3>
+                                            <p>Pay only for expenses not covered by your insurance policy at the time of discharge.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="document-requirements">
+                                    <h3>Required Documents</h3>
+                                    <ul>
+                                        <li>Health Insurance Card/Policy Details</li>
+                                        <li>Photo ID Proof (Aadhar/PAN/Passport)</li>
+                                        <li>Cashless Request Form (provided by hospital)</li>
+                                        <li>TPA Card (if applicable)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="tab-pane" id="reimbursement">
+                                <div class="process-steps">
+                                    <div class="step-item">
+                                        <div class="step-number">1</div>
+                                        <div class="step-content">
+                                            <h3>Pay for Treatment</h3>
+                                            <p>Pay for your medical expenses at the hospital and collect all original bills and documents.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="step-item">
+                                        <div class="step-number">2</div>
+                                        <div class="step-content">
+                                            <h3>Collect Documentation</h3>
+                                            <p>Request for all necessary medical reports, discharge summary, and investigation reports.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="step-item">
+                                        <div class="step-number">3</div>
+                                        <div class="step-content">
+                                            <h3>File Claim</h3>
+                                            <p>Submit the claim form along with all original documents to your insurance provider within the specified time frame.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="step-item">
+                                        <div class="step-number">4</div>
+                                        <div class="step-content">
+                                            <h3>Claim Processing</h3>
+                                            <p>Your insurance provider will process the claim and may request additional information if needed.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="step-item">
+                                        <div class="step-number">5</div>
+                                        <div class="step-content">
+                                            <h3>Reimbursement</h3>
+                                            <p>Once approved, the insurance provider will reimburse the eligible amount directly to your bank account.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="document-requirements">
+                                    <h3>Required Documents</h3>
+                                    <ul>
+                                        <li>Claim Form (provided by insurance company)</li>
+                                        <li>Original Hospital Bills and Receipts</li>
+                                        <li>Discharge Summary</li>
+                                        <li>Investigation Reports</li>
+                                        <li>Doctor's Prescription</li>
+                                        <li>Pharmacy Bills</li>
+                                        <li>Any other documents requested by the insurer</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="tab-pane" id="preauth">
+                                <div class="process-steps">
+                                    <div class="step-item">
+                                        <div class="step-number">1</div>
+                                        <div class="step-content">
+                                            <h3>Planned Admission</h3>
+                                            <p>For planned procedures, contact our insurance desk at least 48-72 hours before admission.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="step-item">
+                                        <div class="step-number">2</div>
+                                        <div class="step-content">
+                                            <h3>Submit Documents</h3>
+                                            <p>Provide your insurance details, ID proof, and doctor's recommendation for the procedure.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="step-item">
+                                        <div class="step-number">3</div>
+                                        <div class="step-content">
+                                            <h3>Pre-Authorization Request</h3>
+                                            <p>Our insurance desk will send a pre-authorization request to your insurance provider with estimated costs.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="step-item">
+                                        <div class="step-number">4</div>
+                                        <div class="step-content">
+                                            <h3>Approval</h3>
+                                            <p>Wait for approval from the insurance provider before proceeding with the treatment.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="step-item">
+                                        <div class="step-number">5</div>
+                                        <div class="step-content">
+                                            <h3>Treatment & Settlement</h3>
+                                            <p>Once approved, proceed with the treatment and settle any non-covered expenses at discharge.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Insurance Query Form -->
+                <div class="content-section" id="insurance-query">
+                    <h2 class="section-title">Insurance Query</h2>
+                    <p class="section-description">Have questions about insurance coverage? Fill out the form below, and our insurance desk will get back to you.</p>
+                                     
+<form id="insurance-query-form" method="POST" action="insurance_process.php"> 
+                    <div class="form-container">
+    
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="full-name">Full Name <span class="required">*</span></label>
+                                    <input type="text" id="full-name" name="full-name" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="phone">Phone Number <span class="required">*</span></label>
+                                    <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email Address <span class="required">*</span></label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="insurance-provider">Insurance Provider <span class="required">*</span></label>
+                                    <input type="text" id="insurance-provider" name="insurance-provider" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="policy-number">Policy Number (if available)</label>
+                                    <input type="text" id="policy-number" name="policy-number">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="query-type">Query Type <span class="required">*</span></label>
+                                    <select id="query-type" name="query-type" required>
+                                        <option value="">Select Query Type</option>
+                                        <option value="coverage">Coverage Inquiry</option>
+                                        <option value="cashless">Cashless Process</option>
+                                        <option value="reimbursement">Reimbursement Process</option>
+                                        <option value="preauth">Pre-Authorization</option>
+                                        <option value="claim">Claim Status</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="query-details">Query Details <span class="required">*</span></label>
+                                <textarea id="query-details" name="query-details" rows="4" required></textarea>
+                            </div>
+                            
+                            <div class="form-submit">
+                                <button type="submit" class="btn btn-primary">Submit Query</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- Contact Information -->
+                <div class="content-section">
+                    <h2 class="section-title">Insurance Desk Contact</h2>
+                    
+                    <div class="contact-cards">
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <h3>Phone</h3>
+                            <p><a href="tel:+911234567890">+91 1234 567 890</a></p>
+                            <p><a href="tel:+911234567891">+91 1234 567 891</a></p>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h3>Email</h3>
+                            <p><a href="mailto:insurance@safecarehospital.com">insurance@safecarehospital.com</a></p>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <h3>Working Hours</h3>
+                            <p>Monday to Saturday: 9:00 AM - 6:00 PM</p>
+                            <p>Sunday: 10:00 AM - 2:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <h2>SafeCare Hospital</h2>
+                        <p>Dedicated to patient wellness</p>
+                    </div>
+                    <div class="footer-links">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="branch-details.html">Branches</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="appointment.html">Appointment</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-contact">
+                        <h3>Contact Us</h3>
+                        <p><i class="fas fa-phone"></i> <a href="tel:+911234567890" style="color: rgba(255, 255, 255, 0.8);">+91 1234567890</a></p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:info@safecarehospital.com" style="color: rgba(255, 255, 255, 0.8);">info@safecarehospital.com</a></p>
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Health Street, Medical District</p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 SafeCare Hospital. All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="additional-pages.js"></script>
+</body>
+</html>
