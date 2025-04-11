@@ -136,7 +136,7 @@ if($main_result && $family_success) {
     
     echo json_encode($response);
 }
-} else {
+ else {
     // If not a POST request, redirect to the form page
     header("Location: family-card.html");
     exit();
